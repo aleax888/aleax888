@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="934" height="516" viewBox="0 0 934 516">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a1f95"/>
+      <stop offset="44%" stop-color="#35145e"/>
+      <stop offset="100%" stop-color="#171326"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="69%" cy="20%" r="58%">
+      <stop offset="0%" stop-color="#7c3abc" stop-opacity=".20"/>
+      <stop offset="100%" stop-color="#7c3abc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="facetA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#efeefb" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#a7a3c9" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="facetB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f4ff" stop-opacity=".36"/>
+      <stop offset="100%" stop-color="#8e8ab5" stop-opacity=".08"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <rect width="934" height="516" fill="url(#bg)"/>
+  <rect width="934" height="516" fill="url(#glow)"/>
+
+  <!-- faint atmospheric bands -->
+  <path d="M0 110 C220 96 470 92 934 103" fill="none" stroke="#b88de0" stroke-opacity=".035"/>
+  <path d="M0 218 C250 207 522 206 934 218" fill="none" stroke="#b88de0" stroke-opacity=".02"/>
+  <path d="M0 330 C270 317 620 326 934 338" fill="none" stroke="#b88de0" stroke-opacity=".018"/>
+
+  <!-- Mountain facets -->
+  <g stroke="#f1efff" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round">
+    <!-- filled faces -->
+    <polygon points="382,348 455,293 493,259 455,348" fill="url(#facetB)" stroke="none"/>
+    <polygon points="493,259 588,197 620,200 567,247" fill="url(#facetB)" stroke="none"/>
+    <polygon points="588,197 623,198 651,193 620,236" fill="url(#facetA)" stroke="none"/>
+    <polygon points="651,193 704,198 744,249 699,319 676,287" fill="url(#facetA)" stroke="none"/>
+    <polygon points="704,198 720,196 784,274 744,249" fill="url(#facetB)" stroke="none"/>
+    <polygon points="744,249 784,274 790,303 751,286" fill="url(#facetB)" stroke="none"/>
+    <polygon points="744,249 784,274 827,302 792,331 751,286" fill="url(#facetA)" stroke="none"/>
+    <polygon points="455,348 522,303 568,324 636,445 548,422" fill="#8e89b5" fill-opacity=".08" stroke="none"/>
+    <polygon points="636,445 699,319 793,404 791,431" fill="#8b87b4" fill-opacity=".06" stroke="none"/>
+    <polygon points="793,404 791,331 827,302 849,368" fill="#b4afd1" fill-opacity=".07" stroke="none"/>
+
+    <!-- left ridge -->
+    <path d="M20 516 L178 463 L259 431 L349 376 L455 293 L493 259 L588 197" fill="none"/>
+    <path d="M178 463 L349 463 L455 445 L636 445" fill="none"/>
+    <path d="M20 516 L258 463 L349 463" fill="none"/>
+    <path d="M259 431 L349 376 L349 463" fill="none"/>
+    <path d="M349 376 L455 348 L455 445" fill="none"/>
+    <path d="M455 293 L455 348 L493 259" fill="none"/>
+    <path d="M455 348 L522 303 L568 324 L636 445" fill="none"/>
+    <path d="M455 445 L522 303" fill="none"/>
+    <path d="M349 463 L455 445" fill="none"/>
+    <path d="M258 463 L349 376" fill="none"/>
+
+    <!-- mid mountain -->
+    <path d="M455 293 L493 259 L522 236 L567 247 L588 197" fill="none"/>
+    <path d="M493 259 L522 303 L568 324 L567 247" fill="none"/>
+    <path d="M522 236 L567 247" fill="none"/>
+    <path d="M567 247 L620 236 L623 198" fill="none"/>
+    <path d="M588 197 L620 236 L651 193" fill="none"/>
+    <path d="M620 236 L676 287 L651 193" fill="none"/>
+    <path d="M620 236 L699 319" fill="none"/>
+    <path d="M676 287 L699 319 L744 249" fill="none"/>
+    <path d="M699 319 L793 404 L744 249" fill="none"/>
+
+    <!-- summit network -->
+    <path d="M588 197 L620 198 L651 193 L670 190 L704 198 L720 196 L756 221 L784 274" fill="none"/>
+    <path d="M620 198 L651 193 L676 287" fill="none"/>
+    <path d="M651 193 L704 198" fill="none"/>
+    <path d="M651 193 L744 249" fill="none"/>
+    <path d="M704 198 L744 249" fill="none"/>
+    <path d="M720 196 L756 221 L784 274" fill="none"/>
+    <path d="M744 249 L756 221" fill="none"/>
+    <path d="M784 274 L827 302 L792 331 L751 286" fill="none"/>
+    <path d="M792 331 L849 368 L827 302" fill="none"/>
+    <path d="M827 302 L904 342 L849 368" fill="none"/>
+    <path d="M849 368 L933 432" fill="none"/>
+    <path d="M904 342 L933 359" fill="none"/>
+
+    <!-- central descent -->
+    <path d="M651 193 L636 445" fill="none"/>
+    <path d="M636 445 L699 319" fill="none"/>
+    <path d="M636 445 L793 404" fill="none"/>
+    <path d="M636 445 L751 516" fill="none"/>
+    <path d="M636 445 L610 516" fill="none"/>
+    <path d="M699 319 L793 404" fill="none"/>
+    <path d="M699 319 L792 331" fill="none"/>
+    <path d="M793 404 L792 331" fill="none"/>
+    <path d="M792 331 L849 368" fill="none"/>
+    <path d="M793 404 L934 433" fill="none"/>
+    <path d="M793 404 L850 449" fill="none"/>
+    <path d="M850 449 L934 516" fill="none"/>
+
+    <!-- right slope -->
+    <path d="M849 368 L904 342 L933 359" fill="none"/>
+    <path d="M849 368 L933 432" fill="none"/>
+    <path d="M849 368 L850 449" fill="none"/>
+    <path d="M850 449 L934 433" fill="none"/>
+    <path d="M850 449 L934 516" fill="none"/>
+    <path d="M934 433 L934 516" fill="none"/>
+    <path d="M791 431 L850 449" fill="none"/>
+
+    <!-- lower left triangulation -->
+    <path d="M20 516 L178 463 L259 463 L455 516" fill="none"/>
+    <path d="M178 463 L349 463 L455 516" fill="none"/>
+    <path d="M259 463 L455 445 L455 516" fill="none"/>
+    <path d="M349 463 L385 516" fill="none"/>
+    <path d="M455 445 L455 516" fill="none"/>
+    <path d="M455 445 L610 516" fill="none"/>
+    <path d="M455 516 L610 516" fill="none"/>
+
+    <!-- extra linework on far right / outer silhouette -->
+    <path d="M720 196 L813 267 L852 312 L904 342" fill="none"/>
+    <path d="M756 221 L813 267" fill="none"/>
+    <path d="M784 274 L813 267" fill="none"/>
+    <path d="M827 302 L813 267" fill="none"/>
+    <path d="M813 267 L852 312" fill="none"/>
+    <path d="M852 312 L904 342" fill="none"/>
+    <path d="M904 342 L933 359" fill="none"/>
+
+    <!-- subtle distant base connections -->
+    <path d="M100 516 L259 463" fill="none" stroke-opacity=".6"/>
+    <path d="M349 463 L610 516" fill="none" stroke-opacity=".55"/>
+    <path d="M610 516 L751 516" fill="none" stroke-opacity=".5"/>
+  </g>
+
+  <!-- small soft highlight on the summit -->
+  <path d="M589 197 L621 198 L651 193" fill="none" stroke="#ffffff" stroke-opacity=".72" stroke-width="1.8" filter="url(#soft)"/>
+
+</svg>
