@@ -1,0 +1,64 @@
+<svg width="900" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a0e77" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#310850" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <rect
+    width="900"
+    height="180"
+    fill="url(#gradient)"
+  />
+
+  <!-- Message -->
+  <text x="450" y="66"
+    text-anchor="middle"
+    font-family="Poppins, sans-serif"
+    font-size="18"
+    font-weight="bold"
+    letter-spacing="3"
+    fill="#ffffff"
+    opacity="0.9">
+    Full-Stack
+  </text>
+
+  <text x="450" y="102"
+    text-anchor="middle"
+    font-family="Poppins, sans-serif"
+    font-size="38"
+    font-weight="bold"
+    fill="#ffffff">
+    Software Engineer
+  </text>
+
+  <!-- Back wave -->
+  <path fill="#bcafcf" opacity="0.4">
+    <animate
+      attributeName="d"
+      dur="20s"
+      repeatCount="indefinite"
+      values="
+        M0 140 C150 180 300 180 450 145 C600 110 750 115 900 145 L900 180 L0 180 Z;
+        M0 145 C150 105 300 110 450 145 C600 180 750 180 900 140 L900 180 L0 180 Z;
+        M0 140 C150 180 300 180 450 145 C600 110 750 115 900 145 L900 180 L0 180 Z"
+    />
+  </path>
+
+  <!-- Front wave -->
+  <path fill="#1a0633" opacity="0.9">
+    <animate
+      attributeName="d"
+      dur="14s"
+      repeatCount="indefinite"
+      values="
+        M0 155 C150 190 300 190 450 160 C600 130 750 135 900 160 L900 180 L0 180 Z;
+        M0 160 C150 125 300 130 450 160 C600 190 750 190 900 155 L900 180 L0 180 Z;
+        M0 155 C150 190 300 190 450 160 C600 130 750 135 900 160 L900 180 L0 180 Z"
+    />
+  </path>
+
+</svg>
