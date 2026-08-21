@@ -50,9 +50,7 @@
          </stop>
 
       </linearGradient>
-   </defs>
 
-   <defs>
       <!-- snow effect -->
       <linearGradient
          id="base_snow_gradient"
@@ -122,14 +120,15 @@
 
       </linearGradient>
 
+      <!-- Radius -->
+      <clipPath id="roundedClip">
+         <rect width="1377" height="768" rx="20" ry="20" />
+      </clipPath>
    </defs>
 
-   <rect x="0" y="0" width="1377" height="768" fill="url(#bg_gradient)" />
 
-   <g
-      inkscape:groupmode="layer"
-      id="layer2"
-      inkscape:label="mesh">
+   <g clip-path="url(#roundedClip)">
+      <rect x="0" y="0" width="1377" height="768" fill="url(#bg_gradient)" />
       <path
          d="m 913.01051,297.25 38.159,-1.861 1.861,-11.634 z"
          style="fill:url(#slow_snow_gradient);stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"

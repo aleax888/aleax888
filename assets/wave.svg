@@ -1,51 +1,51 @@
 <svg width="900" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- Background -->
   <defs>
+    <!-- Background -->
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4a0e77" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#310850" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#4a0e77" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#310850" stop-opacity="0.95" />
     </linearGradient>
+    <!-- Radius -->
+    <clipPath id="roundedClip">
+      <rect width="900" height="180" rx="20" ry="20" />
+    </clipPath>
   </defs>
+  
+  <g clip-path="url(#roundedClip)">
+    <rect
+      width="900"
+      height="180"
+      fill="url(#gradient)"
+    />
 
-  <rect
-    width="900"
-    height="180"
-    fill="url(#gradient)"
-  />
+    <!-- Message -->
+    <text x="450" y="66"
+      text-anchor="middle"
+      font-family="Poppins, sans-serif"
+      font-size="18"
+      font-weight="bold"
+      letter-spacing="3"
+      fill="#ffffff"
+      opacity="0.9">
+      Full-Stack
+    </text>
+    <text x="450" y="102"
+      text-anchor="middle"
+      font-family="Poppins, sans-serif"
+      font-size="38"
+      font-weight="bold"
+      fill="#ffffff">
+      Software Engineer
+    </text>
 
-  <!-- Message -->
-  <text x="450" y="66"
-    text-anchor="middle"
-    font-family="Poppins, sans-serif"
-    font-size="18"
-    font-weight="bold"
-    letter-spacing="3"
-    fill="#ffffff"
-    opacity="0.9">
-    Full-Stack
-  </text>
-
-  <text x="450" y="102"
-    text-anchor="middle"
-    font-family="Poppins, sans-serif"
-    font-size="38"
-    font-weight="bold"
-    fill="#ffffff">
-    Software Engineer
-  </text>
-
-
-  <!-- ================================================= -->
-  <!-- BACK WAVE - 2 CURVES                             -->
-  <!-- ================================================= -->
-
-  <path fill="#bcafcf" opacity="0.35">
-    <animate
-      attributeName="d"
-      dur="20s"
-      repeatCount="indefinite"
-      values="
+    <!-- Wave 1 -->
+    <path fill="#bcafcf" opacity="0.35">
+      <animate
+        attributeName="d"
+        dur="20s"
+        repeatCount="indefinite"
+        values="
         M0 145
         C150 180 300 180 450 145
         C600 110 750 115 900 145
@@ -61,20 +61,16 @@
         C600 110 750 115 900 145
         L900 180 L0 180 Z
       "
-    />
-  </path>
+      />
+    </path>
 
-
-  <!-- ================================================= -->
-  <!-- MIDDLE WAVE - 3 CURVES                           -->
-  <!-- ================================================= -->
-
-  <path fill="#8f7aa8" opacity="0.30">
-    <animate
-      attributeName="d"
-      dur="17s"
-      repeatCount="indefinite"
-      values="
+    <!-- Wave 2 -->
+    <path fill="#8f7aa8" opacity="0.30">
+      <animate
+        attributeName="d"
+        dur="17s"
+        repeatCount="indefinite"
+        values="
         M0 150
         C100 175 200 175 300 150
         C400 125 500 125 600 150
@@ -93,20 +89,16 @@
         C700 175 800 175 900 150
         L900 180 L0 180 Z
       "
-    />
-  </path>
+      />
+    </path>
 
-
-  <!-- ================================================= -->
-  <!-- FRONT WAVE - 4 CURVES                            -->
-  <!-- ================================================= -->
-
-  <path fill="#1a0633" opacity="0.55">
-    <animate
-      attributeName="d"
-      dur="14s"
-      repeatCount="indefinite"
-      values="
+    <!-- Wave 3 -->
+    <path fill="#1a0633" opacity="0.55">
+      <animate
+        attributeName="d"
+        dur="14s"
+        repeatCount="indefinite"
+        values="
         M0 155
         C75 180 150 180 225 155
         C300 130 375 130 450 155
@@ -128,7 +120,7 @@
         C750 130 825 130 900 155
         L900 180 L0 180 Z
       "
-    />
-  </path>
-
+      />
+    </path>
+  </g>
 </svg>

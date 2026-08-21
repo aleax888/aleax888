@@ -6,17 +6,22 @@
 ---
 
 <!-- Name -->
-## Hi, I am Alex Maglio Neyra Herrada 👋
+<h1 align="center">Hi, I am Alex Maglio Neyra Herrada 👋</h1>
 
 <!-- Some info -->
-**MOBILE MULTIPLATFORM** · PERÚ (UTC-5)
+<h5 align="center">MOBILE MULTIPLATFORM · PERÚ (UTC-5)</h5>
 
-I am a Computer Science enthusiast specialized in multiplatform mobile development with Flutter.  
-I build practical mobile and backend solutions, and I explore how artificial intelligence can make software more useful, intelligent, and accessible.
+<p align="center">
+I am a Computer Science enthusiast specialized in multiplatform mobile development.  
+</p>
+<p align="center">
+I build practical mobile and backend solutions, and I explore what artificial intelligence can make.
+</p>
 
 ---
 
 <!-- tech stack -->
+<h3 align="center">Tech I use</h3>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=flutter,sqlite,firebase,django,fastapi,aws,postgres,git,github,bash,postman" />
 </p>
@@ -24,6 +29,7 @@ I build practical mobile and backend solutions, and I explore how artificial int
 ---
 
 <!-- contact -->
+<h3 align="center">Find me around the internet</h3>
 <p align="center">
   <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=100&id=VJz2Ob51dvZJ&format=png&color=000000" alt="Website" /></a>
   <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=100&id=mVIL3VQMOa5H&format=png&color=000000" alt="Itch.io" /></a>
@@ -37,5 +43,6 @@ I build practical mobile and backend solutions, and I explore how artificial int
 
 <!-- close image -->
 <p align="center">
-  <img src="assets/lowpoly_misti.svg" alt="Alex Maglio Neyra Herrada banner" />
+  <img src="assets/lowpoly_misti.svg" alt="Misti" />
 </p>
+<p align="center"> <i>Built from Arequipa 🇵🇪, shipped to the world 🌎</i> </p>
