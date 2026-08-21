@@ -12,10 +12,10 @@
 <h5 align="center">MOBILE MULTIPLATFORM · PERÚ (UTC-5)</h5>
 
 <p align="center">
-I am a Computer Science enthusiast specialized in multiplatform mobile development.  
+I am a Computer Science enthusiast specializing in multiplatform mobile development. 
 </p>
 <p align="center">
-I build practical mobile and backend solutions, and I explore what artificial intelligence can make.
+I build practical mobile and backend solutions, and I explore what can be created with artificial intelligence.
 </p>
 
 ---
