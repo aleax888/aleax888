@@ -35,7 +35,7 @@ I build practical mobile and backend solutions, and I explore what can be create
   <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=100&id=mVIL3VQMOa5H&format=png&color=000000" alt="Itch.io" /></a>
   <a href="mailto:alex.maglio.neyra.herrada@gmail.com"><img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Email" /></a>
   <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" /></a>
-  <a href="https://medium.com/@aleax888"><img src="https://img.icons8.com/?size=100&id=67875&format=png&color=000000" alt="Medium" /></a>
+  <a href="https://medium.com/@aleax888"><img src="https://img.icons8.com/?size=100&id=bocK2vOACVtF&format=png&color=000000" alt="Medium" /></a>
   <a href="https://dev.to/aleax888"><img src="https://img.icons8.com/?size=100&id=n98knU41v5Aq&format=png&color=000000" alt="DEV.to" /></a>
 </p>
 
@@ -45,4 +45,4 @@ I build practical mobile and backend solutions, and I explore what can be create
 <p align="center">
   <img src="assets/lowpoly_misti.svg" alt="Misti" />
 </p>
-<p align="center"> <i>Built from Arequipa 🇵🇪, shipped to the world 🌎</i> </p>
+<p align="center"> <i>Built from Arequipa, shipped to the world 🌎</i> </p>

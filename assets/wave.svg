@@ -1,22 +1,61 @@
 <svg width="900" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
 
   <defs>
-    <!-- Background -->
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4a0e77" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#310850" stop-opacity="0.95" />
+    <!-- background -->
+    <linearGradient id="bg_gradient"
+      gradientUnits="userSpaceOnUse"
+      x1="0"
+      y1="0"
+      x2="2048"
+      y2="1142">
+
+      <animateTransform
+        attributeName="gradientTransform"
+        type="rotate"
+        values="0 1024 571;360 1024 571"
+        dur="5s"
+        repeatCount="indefinite" />
+
+      <!-- Morado más brillante -->
+      <stop offset="0" stop-color="#7B1FA2">
+        <animate
+          attributeName="stop-color"
+          values="#7B1FA2;#9C27B0;#7B1FA2"
+          dur="4s"
+          repeatCount="indefinite" />
+      </stop>
+
+      <!-- Violeta profundo -->
+      <stop offset="0.5" stop-color="#4A148C">
+        <animate
+          attributeName="stop-color"
+          values="#4A148C;#6A1B9A;#4A148C"
+          dur="4s"
+          repeatCount="indefinite" />
+      </stop>
+
+      <!-- Púrpura oscuro -->
+      <stop offset="1" stop-color="#1A0033">
+        <animate
+          attributeName="stop-color"
+          values="#1A0033;#38006B;#1A0033"
+          dur="4s"
+          repeatCount="indefinite" />
+      </stop>
+
     </linearGradient>
+
     <!-- Radius -->
     <clipPath id="roundedClip">
       <rect width="900" height="180" rx="20" ry="20" />
     </clipPath>
   </defs>
-  
+
   <g clip-path="url(#roundedClip)">
     <rect
       width="900"
       height="180"
-      fill="url(#gradient)"
+      fill="url(#bg_gradient)"
     />
 
     <!-- Message -->

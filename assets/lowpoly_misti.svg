@@ -22,30 +22,33 @@
             attributeName="gradientTransform"
             type="rotate"
             values="0 1024 571;360 1024 571"
-            dur="15s"
+            dur="5s"
             repeatCount="indefinite" />
 
-         <stop offset="0" stop-color="#4a0e77">
+         <!-- Morado más brillante -->
+         <stop offset="0" stop-color="#7B1FA2">
             <animate
                attributeName="stop-color"
-               values="#4a0e77;#310850;#4a0e77"
-               dur="8s"
+               values="#7B1FA2;#9C27B0;#7B1FA2"
+               dur="4s"
                repeatCount="indefinite" />
          </stop>
 
-         <stop offset="0.5" stop-color="#310850">
+         <!-- Violeta profundo -->
+         <stop offset="0.5" stop-color="#4A148C">
             <animate
                attributeName="stop-color"
-               values="#310850;#1a0633;#310850"
-               dur="8s"
+               values="#4A148C;#6A1B9A;#4A148C"
+               dur="4s"
                repeatCount="indefinite" />
          </stop>
 
-         <stop offset="1" stop-color="#1a0633">
+         <!-- Púrpura oscuro -->
+         <stop offset="1" stop-color="#1A0033">
             <animate
                attributeName="stop-color"
-               values="#1a0633;#4a0e77;#1a0633"
-               dur="8s"
+               values="#1A0033;#38006B;#1A0033"
+               dur="4s"
                repeatCount="indefinite" />
          </stop>
 
@@ -60,9 +63,14 @@
          x2="2048"
          y2="1142">
 
-         <stop offset="0" stop-color="#dcecff" />
-         <stop offset="0.5" stop-color="#ffffff" />
-         <stop offset="1" stop-color="#71869d" />
+         <!-- Azul hielo más marcado -->
+         <stop offset="0" stop-color="#B8DCFF" />
+
+         <!-- Blanco frío brillante -->
+         <stop offset="0.5" stop-color="#FFFFFF" />
+
+         <!-- Azul gris profundo -->
+         <stop offset="1" stop-color="#4F647A" />
 
       </linearGradient>
 
@@ -73,13 +81,13 @@
             attributeName="gradientTransform"
             type="rotate"
             values="0 1024 571;360 1024 571"
-            dur="9s"
+            dur="7s"
             repeatCount="indefinite" />
 
          <animate
             attributeName="x1"
             values="0;200;0"
-            dur="12s"
+            dur="7s"
             repeatCount="indefinite" />
 
       </linearGradient>
@@ -91,13 +99,13 @@
             attributeName="gradientTransform"
             type="rotate"
             values="120 1024 571;480 1024 571"
-            dur="6s"
+            dur="5s"
             repeatCount="indefinite" />
 
          <animate
             attributeName="x1"
             values="200;0;200"
-            dur="6s"
+            dur="5s"
             repeatCount="indefinite" />
 
       </linearGradient>
