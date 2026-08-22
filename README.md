@@ -31,12 +31,12 @@ I build practical mobile and backend solutions, and I explore what can be create
 <!-- contact -->
 <h3 align="center">Find me around the internet</h3>
 <p align="center">
-  <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=100&id=VJz2Ob51dvZJ&format=png&color=000000" alt="Website" /></a>
-  <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=100&id=mVIL3VQMOa5H&format=png&color=000000" alt="Itch.io" /></a>
-  <a href="mailto:alex.maglio.neyra.herrada@gmail.com"><img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Email" /></a>
-  <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" /></a>
-  <a href="https://medium.com/@aleax888"><img src="https://img.icons8.com/?size=100&id=bocK2vOACVtF&format=png&color=000000" alt="Medium" /></a>
-  <a href="https://dev.to/aleax888"><img src="https://img.icons8.com/?size=100&id=n98knU41v5Aq&format=png&color=000000" alt="DEV.to" /></a>
+  <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=80&id=VJz2Ob51dvZJ&format=png&color=000000" alt="Website" /></a>
+  <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=80&id=mVIL3VQMOa5H&format=png&color=000000" alt="Itch.io" /></a>
+  <a href="mailto:alex.maglio.neyra.herrada@gmail.com"><img src="https://img.icons8.com/?size=80&id=qyRpAggnV0zH&format=png&color=000000" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/"><img src="https://img.icons8.com/?size=80&id=13930&format=png&color=000000" alt="LinkedIn" /></a>
+  <a href="https://medium.com/@aleax888"><img src="https://img.icons8.com/?size=80&id=bocK2vOACVtF&format=png&color=000000" alt="Medium" /></a>
+  <a href="https://dev.to/aleax888"><img src="https://img.icons8.com/?size=80&id=n98knU41v5Aq&format=png&color=000000" alt="DEV.to" /></a>
 </p>
 
 ---
