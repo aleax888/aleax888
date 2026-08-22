@@ -1,166 +1,245 @@
 <svg
-    width="900"
-    height="560"
-    viewBox="0 0 900 560"
-    xmlns="http://www.w3.org/2000/svg">
+      width="900"
+      height="560"
+      viewBox="0 0 900 560"
+      xmlns="http://www.w3.org/2000/svg">
 
-    <defs>
+      <defs>
+            <!-- background -->
+            <linearGradient id="bg_gradient"
+                  gradientUnits="userSpaceOnUse"
+                  x1="0"
+                  y1="0"
+                  x2="2048"
+                  y2="1142">
 
-        <linearGradient id="bg_gradient" x1="0" y1="0" x2="900" y2="560">
-            <stop offset="0" stop-color="#7B1FA2"/>
-            <stop offset="0.5" stop-color="#4A148C"/>
-            <stop offset="1" stop-color="#1A0033"/>
-        </linearGradient>
+                  <animateTransform
+                        attributeName="gradientTransform"
+                        type="rotate"
+                        values="0 1024 571;360 1024 571"
+                        dur="5s"
+                        repeatCount="indefinite" />
 
-        <linearGradient id="bar_gradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#22D3EE"/>
-            <stop offset="1" stop-color="#7C3AED"/>
-        </linearGradient>
+                  <!-- Brighter purple -->
+                  <stop offset="0" stop-color="#7B1FA2">
+                        <animate
+                              attributeName="stop-color"
+                              values="#7B1FA2;#9C27B0;#7B1FA2"
+                              dur="4s"
+                              repeatCount="indefinite" />
+                  </stop>
 
-        <linearGradient id="bar_highlight" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#FDE68A"/>
-            <stop offset="1" stop-color="#F59E0B"/>
-        </linearGradient>
+                  <!-- Deep violet -->
+                  <stop offset="0.5" stop-color="#4A148C">
+                        <animate
+                              attributeName="stop-color"
+                              values="#4A148C;#6A1B9A;#4A148C"
+                              dur="4s"
+                              repeatCount="indefinite" />
+                  </stop>
 
-        <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge>
-                <feMergeNode in="blur"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
+                  <!-- Dark purple -->
+                  <stop offset="1" stop-color="#1A0033">
+                        <animate
+                              attributeName="stop-color"
+                              values="#1A0033;#38006B;#1A0033"
+                              dur="4s"
+                              repeatCount="indefinite" />
+                  </stop>
 
-    </defs>
+            </linearGradient>
 
-    <rect width="900" height="560" rx="26" fill="url(#bg_gradient)"/>
+            <linearGradient id="bar_gradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#22D3EE" />
+                  <stop offset="1" stop-color="#7C3AED" />
+            </linearGradient>
 
+            <linearGradient id="bar_highlight" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FDE68A" />
+                  <stop offset="1" stop-color="#F59E0B" />
+            </linearGradient>
 
-    <!-- ===================== Encabezado ===================== -->
+            <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+            </filter>
 
-    <text x="450" y="48" text-anchor="middle" fill="#FFFFFF"
-          font-size="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-          font-weight="bold" letter-spacing="3">
-        GITHUB ACTIVITY
-    </text>
+      </defs>
 
-    <text x="450" y="70" text-anchor="middle" fill="#E9D5FF" opacity="0.8"
-          font-size="12.5" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-        @{{ username }} · en GitHub desde {{ account_created[:4] }}
-    </text>
-
-    <line x1="60" y1="88" x2="840" y2="88" stroke="#FFFFFF" stroke-opacity="0.15"/>
-
-
-    <!-- ===================== Fila de héroe ===================== -->
-
-    <line x1="325" y1="110" x2="325" y2="165" stroke="#FFFFFF" stroke-opacity="0.15"/>
-    <line x1="575" y1="110" x2="575" y2="165" stroke="#FFFFFF" stroke-opacity="0.15"/>
-
-    <text x="200" y="145" text-anchor="middle" fill="#FFFFFF" font-size="42"
-          font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-          font-weight="bold">{{ commits_total }}</text>
-    <text x="200" y="170" text-anchor="middle" fill="#C4B5FD" font-size="12"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-        COMMITS TOTALES
-    </text>
-
-    <text x="450" y="145" text-anchor="middle" fill="#FFFFFF" font-size="42"
-          font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-          font-weight="bold">{{ repositories }}</text>
-    <text x="450" y="170" text-anchor="middle" fill="#C4B5FD" font-size="12"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-        REPOSITORIOS
-    </text>
-
-    <text x="700" y="145" text-anchor="middle" fill="#FFFFFF" font-size="42"
-          font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-          font-weight="bold">{{ longest_streak }}</text>
-    <text x="700" y="170" text-anchor="middle" fill="#C4B5FD" font-size="12"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-        RACHA MÁS LARGA (DÍAS)
-    </text>
-
-    <line x1="60" y1="196" x2="840" y2="196" stroke="#FFFFFF" stroke-opacity="0.15"/>
+      <rect
+            width="900" height="560" rx="26" fill="url(#bg_gradient)" />
 
 
-    <!-- ===================== Gráficos ===================== -->
+      <!-- ===================== Header ===================== -->
 
-    <text x="60" y="222" fill="#FBBF24" font-size="13" font-weight="bold"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-        COMMITS POR AÑO
-    </text>
+      <text x="450" y="48"
+            text-anchor="middle" fill="#FFFFFF"
+            font-size="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+            font-weight="bold" letter-spacing="3">
+            GITHUB ACTIVITY
+      </text>
 
-    <text x="470" y="222" fill="#FBBF24" font-size="13" font-weight="bold"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-        LENGUAJES PRINCIPALES
-    </text>
+      <text x="450" y="70" text-anchor="middle"
+            fill="#E9D5FF"
+            opacity="0.8"
+            font-size="12.5" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+            @{{ username }} · on GitHub since {{ account_created[:4] }}
+      </text>
 
-    <!-- Eje base del gráfico de commits -->
-    <line x1="60" y1="406" x2="430" y2="406" stroke="#FFFFFF" stroke-opacity="0.2"/>
-
-    {% for bar in commits_chart %}
-    <rect x="{{ bar.x }}" y="{{ bar.y }}" width="{{ bar.width }}" height="{{ bar.height }}"
-          rx="4" fill="{{ 'url(#bar_highlight)' if bar.is_best else 'url(#bar_gradient)' }}"
-          {% if bar.is_best %}filter="url(#glow)"{% endif %}/>
-
-    {% if bar.is_best %}
-    <text x="{{ bar.center_x }}" y="{{ bar.y - 22 }}" text-anchor="middle"
-          fill="#FDE68A" font-size="13" filter="url(#glow)">★</text>
-    {% endif %}
-
-    <text x="{{ bar.center_x }}" y="{{ bar.y - 8 }}" text-anchor="middle"
-          fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">{{ bar.count }}</text>
-
-    <text x="{{ bar.center_x }}" y="422" text-anchor="middle"
-          fill="#C4B5FD" font-size="10"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">'{{ bar.year_short }}</text>
-    {% endfor %}
-
-    <!-- Barras de lenguajes -->
-    {% for lang in language_bars %}
-    <text x="470" y="{{ lang.y - 5 }}" fill="#FFFFFF" font-size="12"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">{{ lang.name }}</text>
-    <text x="850" y="{{ lang.y - 5 }}" text-anchor="end" fill="#C4B5FD" font-size="12"
-          font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{ lang.percent }}%</text>
-
-    <rect x="470" y="{{ lang.y }}" width="380" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.12"/>
-    <rect x="470" y="{{ lang.y }}" width="{{ lang.bar_width }}" height="6" rx="3" fill="{{ lang.color }}"/>
-    {% endfor %}
-
-    <line x1="60" y1="430" x2="840" y2="430" stroke="#FFFFFF" stroke-opacity="0.15"/>
+      <line
+            x1="60" y1="88" x2="840" y2="88" stroke="#FFFFFF" stroke-opacity="0.15" />
 
 
-    <!-- ===================== Datos curiosos ===================== -->
+      <!-- ===================== Hero Row ===================== -->
 
-    <text x="158" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-          font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{ best_year.commits }}</text>
-    <text x="158" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10" letter-spacing="1"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS EN {{ best_year.year }}</text>
+      <line x1="325"
+            y1="110"
+            x2="325"
+            y2="165"
+            stroke="#FFFFFF"
+            stroke-opacity="0.15" />
+      <line x1="575"
+            y1="110"
+            x2="575"
+            y2="165"
+            stroke="#FFFFFF"
+            stroke-opacity="0.15" />
 
-    <text x="353" y="458" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="bold"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">{{ most_active_weekday }}</text>
-    <text x="353" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10" letter-spacing="1"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">DÍA MÁS ACTIVO</text>
+      <text x="200"
+            y="145"
+            text-anchor="middle"
+            fill="#FFFFFF"
+            font-size="42"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
+            font-weight="bold">{{ commits_total }}
+      </text>
+      <text
+            x="200"
+            y="170"
+            text-anchor="middle"
+            fill="#C4B5FD" font-size="12"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+            TOTAL COMMITS
+      </text>
 
-    <text x="548" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-          font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{ followers }}</text>
-    <text x="548" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10" letter-spacing="1"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">SEGUIDORES</text>
+      <text x="450" y="145" text-anchor="middle"
+            fill="#FFFFFF"
+            font-size="42"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
+            font-weight="bold">{{ repositories }}
+      </text>
+      <text x="450" y="170" text-anchor="middle"
+            fill="#C4B5FD" font-size="12"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+            REPOSITORIES
+      </text>
 
-    <text x="743" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-          font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{ total_stars }}</text>
-    <text x="743" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10" letter-spacing="1"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">ESTRELLAS RECIBIDAS</text>
+<text x="700" y="145" text-anchor="middle"
+            fill="#FFFFFF"
+            font-size="42"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
+            font-weight="bold">{{ longest_streak }}</text>
+<text x="700" y="170" text-anchor="middle"
+            fill="#C4B5FD" font-size="12"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+            LONGEST STREAK (DAYS)
+</text>
+
+<line x1="60" y1="196" x2="840" y2="196"
+            stroke="#FFFFFF" stroke-opacity="0.15" />
 
 
-    <!-- ===================== Footer ===================== -->
+      <!-- ===================== Charts ===================== -->
 
-    <line x1="60" y1="500" x2="840" y2="500" stroke="#FFFFFF" stroke-opacity="0.12"/>
+<text x="60" y="222" fill="#FFFFFF"
+            font-size="13" font-weight="bold"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+            COMMITS PER YEAR
+</text>
 
-    <text x="450" y="522" text-anchor="middle" fill="#FFFFFF" opacity="0.6" font-size="11"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-        Última actualización: {{ updated }}
-    </text>
+<text x="470" y="222" fill="#FFFFFF" font-size="13"
+            font-weight="bold"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+            MOST USED LANGUAGES
+</text>
+
+      <!-- Base axis for commits chart -->
+<line x1="60" y1="406" x2="430" y2="406"
+            stroke="#FFFFFF" stroke-opacity="0.2" /> {% for bar in commits_chart %} <rect
+            x="{{ bar.x }}" y="{{ bar.y }}" width="{{ bar.width }}" height="{{ bar.height }}"
+            rx="4" fill="{{ 'url(#bar_highlight)' if bar.is_best else 'url(#bar_gradient)' }}"
+            filter="{{ 'url(#glow)' if bar.is_best else 'none' }}" /> {% if bar.is_best %} <text
+            x="{{ bar.center_x }}" y="{{ bar.y - 22 }}" text-anchor="middle"
+            fill="#FDE68A" font-size="13" filter="url(#glow)">★</text> {% endif %} <text
+            x="{{ bar.center_x }}" y="{{ bar.y - 8 }}" text-anchor="middle"
+            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">{{ bar.count }}</text>
+
+<text
+            x="{{ bar.center_x }}" y="422" text-anchor="middle"
+            fill="#C4B5FD" font-size="10"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'{{ bar.year_short }}</text> {%
+      endfor %} <!-- Language bars --> {% for lang in language_bars %} <text x="470" y="{{ lang.y - 5 }}" fill="#FFFFFF"
+            font-size="12"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">{{ lang.name }}</text>
+<text
+            x="850" y="{{ lang.y - 5 }}" text-anchor="end" fill="#C4B5FD" font-size="12"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{
+      lang.percent }}%</text>
+
+<rect x="470" y="{{ lang.y }}" width="380" height="6" rx="3"
+            fill="#FFFFFF" fill-opacity="0.12" />
+<rect x="470" y="{{ lang.y }}"
+            width="{{ lang.bar_width }}" height="6" rx="3" fill="{{ lang.color }}" /> {% endfor %} <line
+            x1="60" y1="430" x2="840" y2="430" stroke="#FFFFFF" stroke-opacity="0.15" />
+
+
+      <!-- ===================== Fun Facts ===================== -->
+
+<text
+            x="158" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{
+      best_year.commits }}</text>
+<text x="158" y="480" text-anchor="middle" fill="#C4B5FD"
+            font-size="10" letter-spacing="1"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS IN {{ best_year.year }}</text>
+
+<text
+            x="353" y="458" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="bold"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">{{ most_active_weekday }}</text>
+<text
+            x="353" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10" letter-spacing="1"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">MOST ACTIVE DAY</text>
+
+<text
+            x="548" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{
+      followers }}</text>
+<text x="548" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
+            letter-spacing="1"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">FOLLOWERS</text>
+
+<text x="743"
+            y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{
+      total_stars }}</text>
+<text x="743" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
+            letter-spacing="1"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">STARS RECEIVED</text>
+
+
+      <!-- ===================== Footer ===================== -->
+
+<line
+            x1="60" y1="500" x2="840" y2="500" stroke="#FFFFFF" stroke-opacity="0.12" />
+
+<text
+            x="450" y="522" text-anchor="middle" fill="#FFFFFF" opacity="0.6" font-size="11"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+            Last updated: {{ updated }}
+</text>
 
 </svg>

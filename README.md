@@ -28,6 +28,12 @@ I build practical mobile and backend solutions, and I explore what can be create
 
 ---
 
+<p align="center">
+  <img src="assets/github_stats.svg" alt="Misti" />
+</p>
+
+---
+
 <!-- contact -->
 <h3 align="center">Find me around the internet</h3>
 <p align="center">
