@@ -38,7 +38,8 @@ HEADERS = {
     "Accept": "application/vnd.github+json",
 }
 
-WEEKDAYS_ES = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+WEEKDAYS_EN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+MONTHS_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 # Geometría del gráfico de barras "commits por año" (debe coincidir con las
 # coordenadas usadas en assets/github_stats.svg.template).
@@ -47,12 +48,17 @@ CHART_WIDTH = 370
 CHART_BASELINE_Y = 406
 CHART_MAX_HEIGHT = 130
 BAR_WIDTH = 28
-MAX_YEARS_SHOWN = 8
+MAX_YEARS_SHOWN = 6
 
 # Geometría de las barras horizontales de "lenguajes principales".
-LANG_TOP_Y = 276
-LANG_ROW_HEIGHT = 26
+# Usa el mismo alto disponible que el chart de commits (CHART_MAX_HEIGHT)
+# para que ambos bloques queden simétricos, y reparte las filas tipo
+# "space-between" según cuántos lenguajes haya.
+LANG_AREA_TOP = 276
+LANG_AREA_HEIGHT = CHART_MAX_HEIGHT
 LANG_TRACK_WIDTH = 380
+LANG_BAR_HEIGHT = 6        # grosor normal de la barra
+LANG_BAR_HEIGHT_TOP = 10   # grosor del lenguaje #1 (destacado)
 
 
 # ---------------------------------------------------------------------------
@@ -189,8 +195,12 @@ def get_contributions_by_year(start_year: int) -> dict[int, dict]:
 # Agregaciones y datos curiosos
 # ---------------------------------------------------------------------------
 
-def aggregate_languages(repos: list[dict], top_n: int = 5) -> list[dict]:
-    """Suma bytes de código por lenguaje en todos los repos y calcula %."""
+def aggregate_languages(repos: list[dict], top_n: int = 3) -> list[dict]:
+    """Suma bytes de código por lenguaje en todos los repos y calcula %.
+
+    Devuelve los `top_n` lenguajes más usados y agrupa el resto en una
+    entrada sintética "Others" (si es que sobra algo por agrupar).
+    """
     totals: Counter[str] = Counter()
     colors: dict[str, str] = {}
 
@@ -201,17 +211,33 @@ def aggregate_languages(repos: list[dict], top_n: int = 5) -> list[dict]:
             colors[name] = edge["node"]["color"] or "#858585"
 
     total_bytes = sum(totals.values()) or 1
-    ranked = totals.most_common(top_n)
+    ranked = totals.most_common()  # todos, ordenados de mayor a menor
 
-    return [
+    top = ranked[:top_n]
+    rest = ranked[top_n:]
+
+    languages = [
         {
             "name": name,
             "bytes": size,
             "percent": round(size / total_bytes * 100, 1),
             "color": colors[name],
         }
-        for name, size in ranked
+        for name, size in top
     ]
+
+    if rest:
+        others_bytes = sum(size for _, size in rest)
+        languages.append(
+            {
+                "name": "Others",
+                "bytes": others_bytes,
+                "percent": round(others_bytes / total_bytes * 100, 1),
+                "color": "#858585",
+            }
+        )
+
+    return languages
 
 
 def flatten_calendar_days(contributions_by_year: dict[int, dict]) -> list[dict]:
@@ -242,14 +268,19 @@ def most_active_weekday(days: list[dict]) -> str:
     if not totals:
         return "N/A"
     weekday_index, _ = totals.most_common(1)[0]
-    return WEEKDAYS_ES[weekday_index]
+    return WEEKDAYS_EN[weekday_index]
 
 
 def busiest_day(days: list[dict]) -> dict | None:
     if not days:
         return None
     top = max(days, key=lambda d: d["contributionCount"])
-    return {"date": top["date"], "commits": top["contributionCount"]}
+    date = datetime.strptime(top["date"], "%Y-%m-%d")
+    return {
+        "date": top["date"],
+        "commits": top["contributionCount"],
+        "date_label": f"{date.day} {MONTHS_EN[date.month - 1]} {date.year}",
+    }
 
 
 def build_commits_chart(commits_by_year: dict[int, int], best_year: int) -> list[dict]:
@@ -284,14 +315,29 @@ def build_commits_chart(commits_by_year: dict[int, int], best_year: int) -> list
 
 
 def build_language_bars(top_languages: list[dict]) -> list[dict]:
-    """Precalcula la posición y el ancho de barra de cada lenguaje."""
+    """Precalcula la posición y el ancho de barra de cada lenguaje.
+
+    Las filas se reparten tipo "space-between" a lo largo de
+    LANG_AREA_HEIGHT (mismo alto que el chart de commits), en vez de usar
+    una altura de fila fija: con pocos lenguajes quedan más separados, con
+    más lenguajes se acomodan igual sin desbordar.
+
+    El lenguaje #1 (índice 0) se marca como `is_top` y recibe una barra
+    más gruesa para que el template lo resalte con el gradiente/glow.
+    """
+    n = len(top_languages)
+    step = LANG_AREA_HEIGHT / (n - 1) if n > 1 else 0
+
     bars = []
     for i, lang in enumerate(top_languages):
+        is_top = i == 0
         bars.append(
             {
                 **lang,
-                "y": LANG_TOP_Y + i * LANG_ROW_HEIGHT,
+                "y": round(LANG_AREA_TOP + i * step),
                 "bar_width": round(lang["percent"] / 100 * LANG_TRACK_WIDTH),
+                "bar_height": LANG_BAR_HEIGHT_TOP if is_top else LANG_BAR_HEIGHT,
+                "is_top": is_top,
             }
         )
     return bars

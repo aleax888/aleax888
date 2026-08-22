@@ -54,9 +54,14 @@
                   <stop offset="1" stop-color="#7C3AED" />
             </linearGradient>
 
-            <linearGradient id="bar_highlight" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#FDE68A" />
-                  <stop offset="1" stop-color="#F59E0B" />
+            <linearGradient id="commit_highlight_gradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#E9D5FF" />
+                  <stop offset="1" stop-color="#A855F7" />
+            </linearGradient>
+
+            <linearGradient id="lang_highlight_gradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#E9D5FF" />
+                  <stop offset="1" stop-color="#A855F7" />
             </linearGradient>
 
             <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
@@ -114,7 +119,7 @@
             fill="#FFFFFF"
             font-size="42"
             font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-            font-weight="bold">718
+            font-weight="bold">721
       </text>
       <text
             x="200"
@@ -141,11 +146,11 @@
             fill="#FFFFFF"
             font-size="42"
             font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-            font-weight="bold">11</text>
+            font-weight="bold">7</text>
 <text x="700" y="170" text-anchor="middle"
             fill="#C4B5FD" font-size="12"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-            LONGEST STREAK (DAYS)
+            STARS RECEIVED
 </text>
 
 <line x1="60" y1="196" x2="840" y2="196"
@@ -169,91 +174,69 @@
       <!-- Base axis for commits chart -->
 <line x1="60" y1="406" x2="430" y2="406"
             stroke="#FFFFFF" stroke-opacity="0.2" />  <rect
-            x="60" y="402" width="28" height="4"
+            x="60" y="359" width="28" height="47"
             rx="4" fill="url(#bar_gradient)"
             filter="none" />  <text
-            x="74" y="394" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">0</text>
-
-<text
-            x="74" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'19</text>  <rect
-            x="109" y="402" width="28" height="4"
-            rx="4" fill="url(#bar_gradient)"
-            filter="none" />  <text
-            x="123" y="394" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">0</text>
-
-<text
-            x="123" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'20</text>  <rect
-            x="158" y="359" width="28" height="47"
-            rx="4" fill="url(#bar_gradient)"
-            filter="none" />  <text
-            x="172" y="351" text-anchor="middle"
+            x="74" y="351" text-anchor="middle"
             fill="#FFFFFF" fill-opacity="0.9" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">100</text>
 
 <text
-            x="172" y="422" text-anchor="middle"
+            x="74" y="422" text-anchor="middle"
             fill="#C4B5FD" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">'21</text>  <rect
-            x="207" y="388" width="28" height="18"
+            x="128" y="388" width="28" height="18"
             rx="4" fill="url(#bar_gradient)"
             filter="none" />  <text
-            x="221" y="380" text-anchor="middle"
+            x="142" y="380" text-anchor="middle"
             fill="#FFFFFF" fill-opacity="0.9" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">39</text>
 
 <text
-            x="221" y="422" text-anchor="middle"
+            x="142" y="422" text-anchor="middle"
             fill="#C4B5FD" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">'22</text>  <rect
-            x="255" y="392" width="28" height="14"
+            x="197" y="392" width="28" height="14"
             rx="4" fill="url(#bar_gradient)"
             filter="none" />  <text
-            x="269" y="384" text-anchor="middle"
+            x="211" y="384" text-anchor="middle"
             fill="#FFFFFF" fill-opacity="0.9" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">30</text>
 
 <text
-            x="269" y="422" text-anchor="middle"
+            x="211" y="422" text-anchor="middle"
             fill="#C4B5FD" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">'23</text>  <rect
-            x="304" y="276" width="28" height="130"
-            rx="4" fill="url(#bar_highlight)"
+            x="265" y="276" width="28" height="130"
+            rx="4" fill="url(#commit_highlight_gradient)"
             filter="url(#glow)" />  <text
-            x="318" y="254" text-anchor="middle"
-            fill="#FDE68A" font-size="13" filter="url(#glow)">★</text>  <text
-            x="318" y="268" text-anchor="middle"
+            x="279" y="254" text-anchor="middle"
+            fill="#E9D5FF" font-size="13" filter="url(#glow)">★</text>  <text
+            x="279" y="268" text-anchor="middle"
             fill="#FFFFFF" fill-opacity="0.9" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">279</text>
 
 <text
-            x="318" y="422" text-anchor="middle"
+            x="279" y="422" text-anchor="middle"
             fill="#C4B5FD" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">'24</text>  <rect
-            x="353" y="322" width="28" height="84"
+            x="334" y="322" width="28" height="84"
             rx="4" fill="url(#bar_gradient)"
             filter="none" />  <text
-            x="367" y="314" text-anchor="middle"
+            x="348" y="314" text-anchor="middle"
             fill="#FFFFFF" fill-opacity="0.9" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">180</text>
 
 <text
-            x="367" y="422" text-anchor="middle"
+            x="348" y="422" text-anchor="middle"
             fill="#C4B5FD" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">'25</text>  <rect
-            x="402" y="364" width="28" height="42"
+            x="402" y="363" width="28" height="43"
             rx="4" fill="url(#bar_gradient)"
             filter="none" />  <text
-            x="416" y="356" text-anchor="middle"
+            x="416" y="355" text-anchor="middle"
             fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">90</text>
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">93</text>
 
 <text
             x="416" y="422" text-anchor="middle"
@@ -263,52 +246,50 @@
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">C</text>
 <text
             x="850" y="271" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">30.8%</text>
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">30.6%</text>
 
-<rect x="470" y="276" width="380" height="6" rx="3"
+<rect x="470" y="276" width="380" height="10" rx="3"
             fill="#FFFFFF" fill-opacity="0.12" />
 <rect x="470" y="276"
-            width="117" height="6" rx="3" fill="#555555" />  <text x="470" y="297" fill="#FFFFFF"
+            width="116" height="10" rx="3"
+            fill="url(#lang_highlight_gradient)"
+            filter="url(#glow)" />  <text x="470" y="314" fill="#FFFFFF"
             font-size="12"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">C++</text>
 <text
-            x="850" y="297" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">23.9%</text>
+            x="850" y="314" text-anchor="end" fill="#C4B5FD" font-size="12"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">23.7%</text>
 
-<rect x="470" y="302" width="380" height="6" rx="3"
+<rect x="470" y="319" width="380" height="6" rx="3"
             fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="302"
-            width="91" height="6" rx="3" fill="#f34b7d" />  <text x="470" y="323" fill="#FFFFFF"
+<rect x="470" y="319"
+            width="90" height="6" rx="3"
+            fill="#f34b7d"
+            filter="none" />  <text x="470" y="358" fill="#FFFFFF"
             font-size="12"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">Dart</text>
 <text
-            x="850" y="323" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">14.7%</text>
+            x="850" y="358" text-anchor="end" fill="#C4B5FD" font-size="12"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">14.6%</text>
 
-<rect x="470" y="328" width="380" height="6" rx="3"
+<rect x="470" y="363" width="380" height="6" rx="3"
             fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="328"
-            width="56" height="6" rx="3" fill="#00B4AB" />  <text x="470" y="349" fill="#FFFFFF"
+<rect x="470" y="363"
+            width="55" height="6" rx="3"
+            fill="#00B4AB"
+            filter="none" />  <text x="470" y="401" fill="#FFFFFF"
             font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">PHP</text>
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">Others</text>
 <text
-            x="850" y="349" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">11.9%</text>
+            x="850" y="401" text-anchor="end" fill="#C4B5FD" font-size="12"
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">31.2%</text>
 
-<rect x="470" y="354" width="380" height="6" rx="3"
+<rect x="470" y="406" width="380" height="6" rx="3"
             fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="354"
-            width="45" height="6" rx="3" fill="#4F5D95" />  <text x="470" y="375" fill="#FFFFFF"
-            font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">Blade</text>
-<text
-            x="850" y="375" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">9.9%</text>
-
-<rect x="470" y="380" width="380" height="6" rx="3"
-            fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="380"
-            width="38" height="6" rx="3" fill="#f7523f" />  <line
+<rect x="470" y="406"
+            width="119" height="6" rx="3"
+            fill="#858585"
+            filter="none" />  <line
             x1="60" y1="430" x2="840" y2="430" stroke="#FFFFFF" stroke-opacity="0.15" />
 
 
@@ -316,14 +297,14 @@
 
 <text
             x="158" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">279</text>
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">64</text>
 <text x="158" y="480" text-anchor="middle" fill="#C4B5FD"
-            font-size="10" letter-spacing="1"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS IN 2024</text>
+            font-size="9.5" letter-spacing="0.5"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS ON 20 Sep 2021</text>
 
 <text
             x="353" y="458" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="bold"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">Lunes</text>
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">Monday</text>
 <text
             x="353" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10" letter-spacing="1"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">MOST ACTIVE DAY</text>
@@ -337,10 +318,10 @@
 
 <text x="743"
             y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">2</text>
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">11</text>
 <text x="743" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
             letter-spacing="1"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">STARS RECEIVED</text>
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">LONGEST STREAK (DAYS)</text>
 
 
       <!-- ===================== Footer ===================== -->
@@ -351,7 +332,7 @@
 <text
             x="450" y="522" text-anchor="middle" fill="#FFFFFF" opacity="0.6" font-size="11"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-            Last updated: 2026-08-21
+            Last updated: 2026-08-22
 </text>
 
 </svg>

@@ -54,9 +54,14 @@
                   <stop offset="1" stop-color="#7C3AED" />
             </linearGradient>
 
-            <linearGradient id="bar_highlight" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#FDE68A" />
-                  <stop offset="1" stop-color="#F59E0B" />
+            <linearGradient id="commit_highlight_gradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#E9D5FF" />
+                  <stop offset="1" stop-color="#A855F7" />
+            </linearGradient>
+
+            <linearGradient id="lang_highlight_gradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#E9D5FF" />
+                  <stop offset="1" stop-color="#A855F7" />
             </linearGradient>
 
             <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
@@ -141,11 +146,12 @@
             fill="#FFFFFF"
             font-size="42"
             font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-            font-weight="bold">{{ longest_streak }}</text>
+            font-weight="bold">{{
+      total_stars }}</text>
 <text x="700" y="170" text-anchor="middle"
             fill="#C4B5FD" font-size="12"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-            LONGEST STREAK (DAYS)
+            STARS RECEIVED
 </text>
 
 <line x1="60" y1="196" x2="840" y2="196"
@@ -170,10 +176,10 @@
 <line x1="60" y1="406" x2="430" y2="406"
             stroke="#FFFFFF" stroke-opacity="0.2" /> {% for bar in commits_chart %} <rect
             x="{{ bar.x }}" y="{{ bar.y }}" width="{{ bar.width }}" height="{{ bar.height }}"
-            rx="4" fill="{{ 'url(#bar_highlight)' if bar.is_best else 'url(#bar_gradient)' }}"
+            rx="4" fill="{{ 'url(#commit_highlight_gradient)' if bar.is_best else 'url(#bar_gradient)' }}"
             filter="{{ 'url(#glow)' if bar.is_best else 'none' }}" /> {% if bar.is_best %} <text
             x="{{ bar.center_x }}" y="{{ bar.y - 22 }}" text-anchor="middle"
-            fill="#FDE68A" font-size="13" filter="url(#glow)">★</text> {% endif %} <text
+            fill="#E9D5FF" font-size="13" filter="url(#glow)">★</text> {% endif %} <text
             x="{{ bar.center_x }}" y="{{ bar.y - 8 }}" text-anchor="middle"
             fill="#FFFFFF" fill-opacity="0.9" font-size="10"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">{{ bar.count }}</text>
@@ -190,10 +196,12 @@
             font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{
       lang.percent }}%</text>
 
-<rect x="470" y="{{ lang.y }}" width="380" height="6" rx="3"
+<rect x="470" y="{{ lang.y }}" width="380" height="{{ lang.bar_height }}" rx="3"
             fill="#FFFFFF" fill-opacity="0.12" />
 <rect x="470" y="{{ lang.y }}"
-            width="{{ lang.bar_width }}" height="6" rx="3" fill="{{ lang.color }}" /> {% endfor %} <line
+            width="{{ lang.bar_width }}" height="{{ lang.bar_height }}" rx="3"
+            fill="{{ 'url(#lang_highlight_gradient)' if lang.is_top else lang.color }}"
+            filter="{{ 'url(#glow)' if lang.is_top else 'none' }}" /> {% endfor %} <line
             x1="60" y1="430" x2="840" y2="430" stroke="#FFFFFF" stroke-opacity="0.15" />
 
 
@@ -202,10 +210,10 @@
 <text
             x="158" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
             font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{
-      best_year.commits }}</text>
+      busiest_day.commits if busiest_day else 0 }}</text>
 <text x="158" y="480" text-anchor="middle" fill="#C4B5FD"
-            font-size="10" letter-spacing="1"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS IN {{ best_year.year }}</text>
+            font-size="9.5" letter-spacing="0.5"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS ON {{ busiest_day.date_label if busiest_day else 'N/A' }}</text>
 
 <text
             x="353" y="458" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="bold"
@@ -224,11 +232,10 @@
 
 <text x="743"
             y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{
-      total_stars }}</text>
+            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">{{ longest_streak }}</text>
 <text x="743" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
             letter-spacing="1"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">STARS RECEIVED</text>
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">LONGEST STREAK (DAYS)</text>
 
 
       <!-- ===================== Footer ===================== -->
