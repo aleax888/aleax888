@@ -64,275 +64,301 @@
                   <stop offset="1" stop-color="#A855F7" />
             </linearGradient>
 
-            <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-                  <feGaussianBlur stdDeviation="3" result="blur" />
-                  <feMerge>
-                        <feMergeNode in="blur" />
-                        <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-            </filter>
+            <!-- Radius -->
+            <clipPath id="roundedClip">
+                  <rect width="900" height="560" rx="20" ry="20" />
+            </clipPath>
 
       </defs>
 
-      <rect
-            width="900" height="560" rx="26" fill="url(#bg_gradient)" />
+      <g clip-path="url(#roundedClip)">
+            <rect
+                  width="900" height="560" fill="url(#bg_gradient)" />
 
 
-      <!-- ===================== Header ===================== -->
+            <!-- ===================== Header ===================== -->
 
-      <text x="450" y="48"
-            text-anchor="middle" fill="#FFFFFF"
-            font-size="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
-            font-weight="bold" letter-spacing="3">
-            GITHUB ACTIVITY
-      </text>
+            <text x="450" y="48"
+                  text-anchor="middle" fill="#FFFFFF"
+                  font-size="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-weight="bold" letter-spacing="3">
+                  GITHUB ACTIVITY
+            </text>
 
-      <text x="450" y="70" text-anchor="middle"
-            fill="#E9D5FF"
-            opacity="0.8"
-            font-size="12.5" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-            @aleax888 · on GitHub since 2018
-      </text>
+            <text x="450" y="70" text-anchor="middle"
+                  fill="#E9D5FF"
+                  opacity="0.8"
+                  font-size="12.5" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+                  @aleax888 · on GitHub since 2018
+            </text>
 
-      <line
-            x1="60" y1="88" x2="840" y2="88" stroke="#FFFFFF" stroke-opacity="0.15" />
-
-
-      <!-- ===================== Hero Row ===================== -->
-
-      <line x1="325"
-            y1="110"
-            x2="325"
-            y2="165"
-            stroke="#FFFFFF"
-            stroke-opacity="0.15" />
-      <line x1="575"
-            y1="110"
-            x2="575"
-            y2="165"
-            stroke="#FFFFFF"
-            stroke-opacity="0.15" />
-
-      <text x="200"
-            y="145"
-            text-anchor="middle"
-            fill="#FFFFFF"
-            font-size="42"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-            font-weight="bold">731
-      </text>
-      <text
-            x="200"
-            y="170"
-            text-anchor="middle"
-            fill="#C4B5FD" font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-            TOTAL COMMITS
-      </text>
-
-      <text x="450" y="145" text-anchor="middle"
-            fill="#FFFFFF"
-            font-size="42"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-            font-weight="bold">18
-      </text>
-      <text x="450" y="170" text-anchor="middle"
-            fill="#C4B5FD" font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-            REPOSITORIES
-      </text>
-
-<text x="700" y="145" text-anchor="middle"
-            fill="#FFFFFF"
-            font-size="42"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-            font-weight="bold">7</text>
-<text x="700" y="170" text-anchor="middle"
-            fill="#C4B5FD" font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-            STARS RECEIVED
-</text>
-
-<line x1="60" y1="196" x2="840" y2="196"
-            stroke="#FFFFFF" stroke-opacity="0.15" />
+            <line
+                  x1="60" y1="88" x2="840" y2="88" stroke="#FFFFFF" stroke-opacity="0.15" />
 
 
-      <!-- ===================== Charts ===================== -->
+            <!-- ===================== Hero Row ===================== -->
 
-<text x="60" y="222" fill="#FFFFFF"
-            font-size="13" font-weight="bold"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-            COMMITS PER YEAR
-</text>
+            <line x1="325"
+                  y1="110"
+                  x2="325"
+                  y2="165"
+                  stroke="#FFFFFF"
+                  stroke-opacity="0.15" />
+            <line x1="575"
+                  y1="110"
+                  x2="575"
+                  y2="165"
+                  stroke="#FFFFFF"
+                  stroke-opacity="0.15" />
 
-<text x="470" y="222" fill="#FFFFFF" font-size="13"
-            font-weight="bold"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
-            MOST USED LANGUAGES
-</text>
+            <text x="200"
+                  y="145"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="42"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
+                  font-weight="bold">731
+            </text>
+            <text
+                  x="200"
+                  y="170"
+                  text-anchor="middle"
+                  fill="#C4B5FD" font-size="12"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+                  TOTAL COMMITS
+            </text>
 
-      <!-- Base axis for commits chart -->
-<line x1="60" y1="406" x2="430" y2="406"
-            stroke="#FFFFFF" stroke-opacity="0.2" />  <rect
-            x="60" y="359" width="28" height="47"
-            rx="4" fill="url(#bar_gradient)"
-            filter="none" />  <text
-            x="74" y="351" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">100</text>
+            <text x="450" y="145" text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="42"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
+                  font-weight="bold">18
+            </text>
+            <text x="450" y="170" text-anchor="middle"
+                  fill="#C4B5FD" font-size="12"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+                  REPOSITORIES
+            </text>
 
-<text
-            x="74" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'21</text>  <rect
-            x="128" y="388" width="28" height="18"
-            rx="4" fill="url(#bar_gradient)"
-            filter="none" />  <text
-            x="142" y="380" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">39</text>
+            <text x="700" y="145" text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="42"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
+                  font-weight="bold">7</text>
+            <text x="700" y="170" text-anchor="middle"
+                  fill="#C4B5FD" font-size="12"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+                  STARS RECEIVED
+            </text>
 
-<text
-            x="142" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'22</text>  <rect
-            x="197" y="392" width="28" height="14"
-            rx="4" fill="url(#bar_gradient)"
-            filter="none" />  <text
-            x="211" y="384" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">30</text>
-
-<text
-            x="211" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'23</text>  <rect
-            x="265" y="276" width="28" height="130"
-            rx="4" fill="url(#commit_highlight_gradient)"
-            filter="url(#glow)" />  <text
-            x="279" y="254" text-anchor="middle"
-            fill="#E9D5FF" font-size="13" filter="url(#glow)">★</text>  <text
-            x="279" y="268" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">279</text>
-
-<text
-            x="279" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'24</text>  <rect
-            x="334" y="322" width="28" height="84"
-            rx="4" fill="url(#bar_gradient)"
-            filter="none" />  <text
-            x="348" y="314" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">180</text>
-
-<text
-            x="348" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'25</text>  <rect
-            x="402" y="358" width="28" height="48"
-            rx="4" fill="url(#bar_gradient)"
-            filter="none" />  <text
-            x="416" y="350" text-anchor="middle"
-            fill="#FFFFFF" fill-opacity="0.9" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">103</text>
-
-<text
-            x="416" y="422" text-anchor="middle"
-            fill="#C4B5FD" font-size="10"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">'26</text>  <!-- Language bars -->  <text x="470" y="271" fill="#FFFFFF"
-            font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">Jupyter Notebook</text>
-<text
-            x="850" y="271" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">47.2%</text>
-
-<rect x="470" y="276" width="380" height="10" rx="3"
-            fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="276"
-            width="179" height="10" rx="3"
-            fill="url(#lang_highlight_gradient)"
-            filter="url(#glow)" />  <text x="470" y="314" fill="#FFFFFF"
-            font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">C</text>
-<text
-            x="850" y="314" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">15.9%</text>
-
-<rect x="470" y="319" width="380" height="6" rx="3"
-            fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="319"
-            width="60" height="6" rx="3"
-            fill="#555555"
-            filter="none" />  <text x="470" y="358" fill="#FFFFFF"
-            font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">C++</text>
-<text
-            x="850" y="358" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">12.3%</text>
-
-<rect x="470" y="363" width="380" height="6" rx="3"
-            fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="363"
-            width="47" height="6" rx="3"
-            fill="#f34b7d"
-            filter="none" />  <text x="470" y="401" fill="#FFFFFF"
-            font-size="12"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">Others</text>
-<text
-            x="850" y="401" text-anchor="end" fill="#C4B5FD" font-size="12"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">24.5%</text>
-
-<rect x="470" y="406" width="380" height="6" rx="3"
-            fill="#FFFFFF" fill-opacity="0.12" />
-<rect x="470" y="406"
-            width="93" height="6" rx="3"
-            fill="#858585"
-            filter="none" />  <line
-            x1="60" y1="430" x2="840" y2="430" stroke="#FFFFFF" stroke-opacity="0.15" />
+            <line x1="60" y1="196" x2="840" y2="196"
+                  stroke="#FFFFFF" stroke-opacity="0.15" />
 
 
-      <!-- ===================== Fun Facts ===================== -->
+            <!-- ===================== Charts ===================== -->
 
-<text
-            x="158" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">64</text>
-<text x="158" y="480" text-anchor="middle" fill="#C4B5FD"
-            font-size="9.5" letter-spacing="0.5"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS ON 20 Sep 2021</text>
+            <text x="60" y="222" fill="#FFFFFF"
+                  font-size="13" font-weight="bold"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+                  COMMITS PER YEAR
+            </text>
 
-<text
-            x="353" y="458" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="bold"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">Monday</text>
-<text
-            x="353" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10" letter-spacing="1"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">MOST ACTIVE DAY</text>
+            <text x="470" y="222" fill="#FFFFFF" font-size="13"
+                  font-weight="bold"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="2">
+                  MOST USED LANGUAGES
+            </text>
 
-<text
-            x="548" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">4</text>
-<text x="548" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
-            letter-spacing="1"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">FOLLOWERS</text>
+            <!-- Base axis for commits chart -->
+            <line x1="60" y1="406" x2="430" y2="406"
+                  stroke="#FFFFFF" stroke-opacity="0.2" />
+            <rect
+                  x="60" y="359" width="28" height="47"
+                  rx="4" fill="url(#bar_gradient)"
+                  filter="none" />
+            <text
+                  x="74" y="351" text-anchor="middle"
+                  fill="#FFFFFF" fill-opacity="0.9" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">100</text>
 
-<text x="743"
-            y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
-            font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">11</text>
-<text x="743" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
-            letter-spacing="1"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">LONGEST STREAK (DAYS)</text>
+            <text
+                  x="74" y="422" text-anchor="middle"
+                  fill="#C4B5FD" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">'21</text>
+            <rect
+                  x="128" y="388" width="28" height="18"
+                  rx="4" fill="url(#bar_gradient)"
+                  filter="none" />
+            <text
+                  x="142" y="380" text-anchor="middle"
+                  fill="#FFFFFF" fill-opacity="0.9" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">39</text>
+
+            <text
+                  x="142" y="422" text-anchor="middle"
+                  fill="#C4B5FD" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">'22</text>
+            <rect
+                  x="197" y="392" width="28" height="14"
+                  rx="4" fill="url(#bar_gradient)"
+                  filter="none" />
+            <text
+                  x="211" y="384" text-anchor="middle"
+                  fill="#FFFFFF" fill-opacity="0.9" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">30</text>
+
+            <text
+                  x="211" y="422" text-anchor="middle"
+                  fill="#C4B5FD" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">'23</text>
+            <rect
+                  x="265" y="276" width="28" height="130"
+                  rx="4" fill="url(#commit_highlight_gradient)"
+                  filter="url(#glow)" />
+            <text
+                  x="279" y="254" text-anchor="middle"
+                  fill="#E9D5FF" font-size="13" filter="url(#glow)">★</text>
+            <text
+                  x="279" y="268" text-anchor="middle"
+                  fill="#FFFFFF" fill-opacity="0.9" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">279</text>
+
+            <text
+                  x="279" y="422" text-anchor="middle"
+                  fill="#C4B5FD" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">'24</text>
+            <rect
+                  x="334" y="322" width="28" height="84"
+                  rx="4" fill="url(#bar_gradient)"
+                  filter="none" />
+            <text
+                  x="348" y="314" text-anchor="middle"
+                  fill="#FFFFFF" fill-opacity="0.9" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">180</text>
+
+            <text
+                  x="348" y="422" text-anchor="middle"
+                  fill="#C4B5FD" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">'25</text>
+            <rect
+                  x="402" y="358" width="28" height="48"
+                  rx="4" fill="url(#bar_gradient)"
+                  filter="none" />
+            <text
+                  x="416" y="350" text-anchor="middle"
+                  fill="#FFFFFF" fill-opacity="0.9" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">103</text>
+
+            <text
+                  x="416" y="422" text-anchor="middle"
+                  fill="#C4B5FD" font-size="10"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">'26</text>  <!-- Language
+            bars -->
+            <text x="470" y="271" fill="#FFFFFF"
+                  font-size="12"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">Jupyter Notebook</text>
+            <text
+                  x="850" y="271" text-anchor="end" fill="#C4B5FD" font-size="12"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+                  47.2%</text>
+
+            <rect x="470" y="276" width="380" height="10" rx="3"
+                  fill="#FFFFFF" fill-opacity="0.12" />
+            <rect x="470" y="276"
+                  width="179" height="10" rx="3"
+                  fill="url(#lang_highlight_gradient)"
+                  filter="url(#glow)" />
+            <text x="470" y="314" fill="#FFFFFF"
+                  font-size="12"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">C</text>
+            <text
+                  x="850" y="314" text-anchor="end" fill="#C4B5FD" font-size="12"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+                  15.9%</text>
+
+            <rect x="470" y="319" width="380" height="6" rx="3"
+                  fill="#FFFFFF" fill-opacity="0.12" />
+            <rect x="470" y="319"
+                  width="60" height="6" rx="3"
+                  fill="#555555"
+                  filter="none" />
+            <text x="470" y="358" fill="#FFFFFF"
+                  font-size="12"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">C++</text>
+            <text
+                  x="850" y="358" text-anchor="end" fill="#C4B5FD" font-size="12"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+                  12.3%</text>
+
+            <rect x="470" y="363" width="380" height="6" rx="3"
+                  fill="#FFFFFF" fill-opacity="0.12" />
+            <rect x="470" y="363"
+                  width="47" height="6" rx="3"
+                  fill="#f34b7d"
+                  filter="none" />
+            <text x="470" y="401" fill="#FFFFFF"
+                  font-size="12"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">Others</text>
+            <text
+                  x="850" y="401" text-anchor="end" fill="#C4B5FD" font-size="12"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
+                  24.5%</text>
+
+            <rect x="470" y="406" width="380" height="6" rx="3"
+                  fill="#FFFFFF" fill-opacity="0.12" />
+            <rect x="470" y="406"
+                  width="93" height="6" rx="3"
+                  fill="#858585"
+                  filter="none" />
+            <line
+                  x1="60" y1="430" x2="840" y2="430" stroke="#FFFFFF" stroke-opacity="0.15" />
 
 
-      <!-- ===================== Footer ===================== -->
+            <!-- ===================== Fun Facts ===================== -->
 
-<line
-            x1="60" y1="500" x2="840" y2="500" stroke="#FFFFFF" stroke-opacity="0.12" />
+            <text
+                  x="158" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22"
+                  font-weight="bold"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">64</text>
+            <text x="158" y="480" text-anchor="middle" fill="#C4B5FD"
+                  font-size="9.5" letter-spacing="0.5"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">COMMITS ON 20 Sep 2021</text>
 
-<text
-            x="450" y="522" text-anchor="middle" fill="#FFFFFF" opacity="0.6" font-size="11"
-            font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-            Last updated: 2026-08-26
-</text>
+            <text
+                  x="353" y="458" text-anchor="middle" fill="#FFFFFF" font-size="17"
+                  font-weight="bold"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">Monday</text>
+            <text
+                  x="353" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
+                  letter-spacing="1"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">MOST ACTIVE DAY</text>
+
+            <text
+                  x="548" y="460" text-anchor="middle" fill="#FFFFFF" font-size="22"
+                  font-weight="bold"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">4</text>
+            <text x="548" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
+                  letter-spacing="1"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">FOLLOWERS</text>
+
+            <text x="743"
+                  y="460" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold"
+                  font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">11</text>
+            <text x="743" y="480" text-anchor="middle" fill="#C4B5FD" font-size="10"
+                  letter-spacing="1"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">LONGEST STREAK (DAYS)</text>
+
+
+            <!-- ===================== Footer ===================== -->
+
+            <line
+                  x1="60" y1="500" x2="840" y2="500" stroke="#FFFFFF" stroke-opacity="0.12" />
+
+            <text
+                  x="450" y="522" text-anchor="middle" fill="#FFFFFF" opacity="0.6" font-size="11"
+                  font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+                  Last updated: 2026-08-26
+            </text>
+      </g>
 
 </svg>
