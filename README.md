@@ -38,10 +38,10 @@ I build practical mobile and backend solutions, and I explore what can be create
 <h3 align="center">Find me around the internet</h3>
 <p align="center">
   <a href="https://www.google.com/search?q=coming+soon"><img src="https://img.icons8.com/?size=80&id=VJz2Ob51dvZJ&format=png&color=000000" alt="Website" /></a>
-  <a href="https://aleax888.itch.io/"><img src="https://cdn.simpleicons.org/itchdotio/FA5C5C" width="65" style="padding: 0px;" alt="Itch.io" /></a>
+  <a href="https://aleax888.itch.io/"><img src="https://cdn.simpleicons.org/itchdotio/FA5C5C" width="65" style="padding: 7px;" alt="Itch.io" /></a>
   <a href="mailto:alex.maglio.neyra.herrada@gmail.com"><img src="https://img.icons8.com/?size=80&id=qyRpAggnV0zH&format=png&color=000000" alt="Email" /></a>
   <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/"><img src="https://img.icons8.com/?size=80&id=13930&format=png&color=000000" alt="LinkedIn" /></a>
-  <a href="https://medium.com/@aleax888"><img src="https://cdn.simpleicons.org/medium/808080" width="60" style="padding: 0px 0;" alt="Medium" /></a>
+  <a href="https://medium.com/@aleax888"><img src="https://cdn.simpleicons.org/medium/808080" width="60" style="padding: 10px 0;" alt="Medium" /></a>
   <a href="https://dev.to/aleax888"><img src="https://img.icons8.com/?size=80&id=n98knU41v5Aq&format=png&color=000000" alt="DEV.to" /></a>
 </p>
 
