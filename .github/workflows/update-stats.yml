@@ -1,0 +1,38 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Update stats
+        env:
+          GITHUB_USERNAME: ${{ secrets.STATS_GH_USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.STATS_GH_TOKEN }}
+        run: python update_stats.py
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/github_stats.svg
+          git diff --staged --quiet || git commit -m "chore: actualizar github stats"
+          git push
