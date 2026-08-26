@@ -36,46 +36,46 @@ I build practical mobile and backend solutions, and I explore what can be create
 
 <!-- contact -->
 <h3 align="center">Find me around the internet</h3>
-<table align="center">
+<table align="center" style="border: 0;">
   <tr>
     <td align="center">
       <a href="https://www.google.com/search?q=coming+soon">
-        <img src="https://api.iconify.design/fa6-solid:globe.svg?color=%239CA3AF" width="42" alt="Website" />
+        <img src="https://api.iconify.design/fa6-solid:globe.svg?color=%239CA3AF" width="60" alt="Website" />
       </a>
       <br />
       <sub>Website</sub>
     </td>
     <td align="center">
       <a href="https://aleax888.itch.io/">
-        <img src="https://cdn.simpleicons.org/itchdotio/9CA3AF" width="42" alt="Itch.io" />
+        <img src="https://cdn.simpleicons.org/itchdotio/9CA3AF" width="60" alt="Itch.io" />
       </a>
       <br />
       <sub>Itch.io</sub>
     </td>
     <td align="center">
       <a href="mailto:alex.maglio.neyra.herrada@gmail.com">
-        <img src="https://cdn.simpleicons.org/gmail/9CA3AF" width="42" alt="Email" />
+        <img src="https://cdn.simpleicons.org/gmail/9CA3AF" width="60" alt="Email" />
       </a>
       <br />
       <sub>Email</sub>
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/">
-        <img src="https://api.iconify.design/fa6-brands:linkedin-in.svg?color=%239CA3AF" width="42" alt="LinkedIn" />
+        <img src="https://api.iconify.design/fa6-brands:linkedin-in.svg?color=%239CA3AF" width="60" alt="LinkedIn" />
       </a>
       <br />
       <sub>LinkedIn</sub>
     </td>
     <td align="center">
       <a href="https://medium.com/@aleax888">
-        <img src="https://cdn.simpleicons.org/medium/9CA3AF" width="42" alt="Medium" />
+        <img src="https://cdn.simpleicons.org/medium/9CA3AF" width="60" alt="Medium" />
       </a>
       <br />
       <sub>Medium</sub>
     </td>
     <td align="center">
       <a href="https://dev.to/aleax888">
-        <img src="https://cdn.simpleicons.org/devdotto/9CA3AF" width="42" alt="DEV.to" />
+        <img src="https://cdn.simpleicons.org/devdotto/9CA3AF" width="60" alt="DEV.to" />
       </a>
       <br />
       <sub>DEV.to</sub>
