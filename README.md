@@ -36,13 +36,19 @@ I build practical mobile and backend solutions, and I explore what can be create
 
 <!-- contact -->
 <h3 align="center">Find me around the internet</h3>
+<h3 align="center">Find me around the internet</h3>
 <p align="center">
-  <a href="https://www.google.com/search?q=coming+soon"><img src="https://api.iconify.design/fa6-solid:globe.svg?color=%239CA3AF" width="80" style="padding: 8px;" alt="Website" /></a>
-  <a href="https://aleax888.itch.io/"><img src="https://cdn.simpleicons.org/itchdotio/9CA3AF" width="80" style="padding: 8px;" alt="Itch.io" /></a>
-  <a href="mailto:alex.maglio.neyra.herrada@gmail.com"><img src="https://cdn.simpleicons.org/gmail/9CA3AF" width="80" style="padding: 8px;" alt="Email" /></a>
-  <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/"><img src="https://api.iconify.design/fa6-brands:linkedin-in.svg?color=%239CA3AF" width="80" style="padding: 8px;" alt="LinkedIn" /></a>
-  <a href="https://medium.com/@aleax888"><img src="https://cdn.simpleicons.org/medium/9CA3AF" width="80" style="padding: 8px;" alt="Medium" /></a>
-  <a href="https://dev.to/aleax888"><img src="https://cdn.simpleicons.org/devdotto/9CA3AF" width="80" style="padding: 8px;" alt="DEV.to" /></a>
+  <a href="https://www.google.com/search?q=coming+soon"><img src="https://api.iconify.design/fa6-solid:globe.svg?color=%239CA3AF" width="80" alt="Website" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://aleax888.itch.io/"><img src="https://cdn.simpleicons.org/itchdotio/9CA3AF" width="80" alt="Itch.io" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="mailto:alex.maglio.neyra.herrada@gmail.com"><img src="https://cdn.simpleicons.org/gmail/9CA3AF" width="80" alt="Email" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/"><img src="https://api.iconify.design/fa6-brands:linkedin-in.svg?color=%239CA3AF" width="80" alt="LinkedIn" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://medium.com/@aleax888"><img src="https://cdn.simpleicons.org/medium/9CA3AF" width="80" alt="Medium" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://dev.to/aleax888"><img src="https://cdn.simpleicons.org/devdotto/9CA3AF" width="80" alt="DEV.to" /></a>
 </p>
 
 ---
