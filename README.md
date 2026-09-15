@@ -1,6 +1,6 @@
 <!-- Banner -->
 <p align="center">
-  <img src="assets/wave.svg" alt="Alex Maglio Neyra Herrada banner" />
+  <img src="assets/banner.svg" alt="Alex Maglio Neyra Herrada banner" />
 </p>
 
 ---
