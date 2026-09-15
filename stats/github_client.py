@@ -1,4 +1,4 @@
-"""Cliente delgado para la API GraphQL de GitHub usada por el proyecto."""
+"""Thin client for the GitHub GraphQL API used by the project."""
 from __future__ import annotations
 
 from datetime import datetime, timezone
@@ -12,7 +12,7 @@ GRAPHQL_URL = f"{REST_URL}/graphql"
 
 
 class GitHubClient:
-    """Encapsula sesión, headers y las queries necesarias para las stats."""
+    """Encapsulates the session, headers, and queries needed for the stats."""
 
     def __init__(self, token: str, timeout: int = 15):
         self._timeout = timeout
@@ -39,7 +39,7 @@ class GitHubClient:
         return data["user"]
 
     def get_all_repositories(self, username: str) -> list[dict]:
-        """Trae TODOS los repos públicos propios, paginando de 100 en 100."""
+        """Fetches ALL public owned repos, paginating 100 at a time."""
         repos: list[dict] = []
         after = None
         while True:
@@ -52,7 +52,7 @@ class GitHubClient:
         return repos
 
     def get_contributions_by_year(self, username: str, start_year: int) -> dict[int, dict]:
-        """Una query por año (el límite de GraphQL es de 1 año por consulta)."""
+        """One query per year (GraphQL limit is one year per query)."""
         current_year = datetime.now(timezone.utc).year
         results: dict[int, dict] = {}
 

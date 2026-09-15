@@ -1,4 +1,4 @@
-"""Agregaciones de estadísticas: commits, lenguajes y datos curiosos."""
+"""Aggregations for stats: commits, languages, and fun facts."""
 from __future__ import annotations
 
 from collections import Counter
@@ -9,22 +9,22 @@ MONTHS_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct
 
 
 class StatsAggregator:
-    """Convierte las respuestas crudas de la API en el diccionario de stats final."""
+    """Turns raw API responses into the final stats dictionary."""
 
     def __init__(self, top_languages_n: int = 3):
         self._top_languages_n = top_languages_n
 
-    # -- Lenguajes ---------------------------------------------------------
+    # -- Languages -----------------------------------------------------------
 
     def aggregate_languages(self, repos: list[dict]) -> list[dict]:
-        """Pondera lenguajes por % dentro de cada repo, no por bytes globales.
+        """Weights languages by % within each repo, not by global bytes.
 
-        Cada repo aporta un total fijo de 100 puntos, repartidos entre sus
-        lenguajes según el % que ocupan en ESE repo (si un repo es 64%
-        Python, Python suma 64 puntos). Así todos los repos pesan igual en
-        el cálculo final, y uno con archivos pesados (p. ej. notebooks con
-        imágenes embebidas) no domina el resultado solo por tener más bytes
-        que el resto.
+        Each repo contributes a fixed total of 100 points, split between its
+        languages according to the % they occupy in that repo (if a repo is 64%
+        Python, Python gets 64 points). This way, all repos weigh equally in the
+        final calculation, and a repo with heavy files (e.g. notebooks with
+        embedded images) does not dominate the result just because it has more
+        bytes than the others.
         """
         points: Counter[str] = Counter()
         colors: dict[str, str] = {}
@@ -34,12 +34,12 @@ class StatsAggregator:
             edges = repo["languages"]["edges"]
             repo_total = sum(edge["size"] for edge in edges)
             if repo_total == 0:
-                continue  # repo sin código detectable (solo README, vacío, etc.)
+                continue  # repo with no detectable code (README only, empty, etc.)
 
             counted_repos += 1
             for edge in edges:
                 name = edge["node"]["name"]
-                share = edge["size"] / repo_total * 100  # % dentro del repo
+                share = edge["size"] / repo_total * 100  # % within the repo
                 points[name] += share
                 colors[name] = edge["node"]["color"] or "#858585"
 
@@ -71,11 +71,11 @@ class StatsAggregator:
 
         return languages
 
-    # -- Calendario de contribuciones --------------------------------------
+    # -- Contribution calendar -----------------------------------------------
 
     @staticmethod
     def flatten_calendar_days(contributions_by_year: dict[int, dict]) -> list[dict]:
-        """Aplana los días de contribución de todos los años, ordenados por fecha."""
+        """Flattens contribution days across all years, ordered by date."""
         days = []
         for year_data in contributions_by_year.values():
             for week in year_data["contributionCalendar"]["weeks"]:
@@ -116,11 +116,11 @@ class StatsAggregator:
             "date_label": f"{date.day} {MONTHS_EN[date.month - 1]} {date.year}",
         }
 
-    # -- Ensamblado final ----------------------------------------------------
+    # -- Final assembly -------------------------------------------------------
 
     def build(self, user: dict, repos: list[dict], contributions_by_year: dict[int, dict]) -> dict:
-        """Devuelve el diccionario de stats (sin el layout de gráficos en
-        píxeles; eso lo agrega ChartLayoutBuilder por separado)."""
+        """Returns the stats dictionary (without the pixel chart layout; that is
+        added separately by ChartLayoutBuilder)."""
         commits_by_year = {
             year: data["totalCommitContributions"] + data["restrictedContributionsCount"]
             for year, data in contributions_by_year.items()
@@ -144,7 +144,7 @@ class StatsAggregator:
         top_languages = self.aggregate_languages(repos)
 
         return {
-            # Perfil
+            # Profile
             "username": user["login"],
             "name": user["name"] or user["login"],
             "updated": datetime.now().strftime("%Y-%m-%d"),
@@ -163,21 +163,21 @@ class StatsAggregator:
                 if top_repo else None
             ),
 
-            # Commits por año
+            # Commits by year
             "commits_total": commits_total,
             "commits_by_year": commits_by_year,           # {2022: 340, 2023: 890, ...}
             "commits_this_year": commits_by_year.get(datetime.now().year, 0),
             "best_year": {"year": best_year, "commits": best_year_commits},
 
-            # Actividad
+            # Activity
             "pull_requests": pull_requests,
             "issues": issues,
             "code_reviews": reviews,
 
-            # Lenguajes (el layout de barras lo agrega ChartLayoutBuilder)
+            # Languages (the bar layout is added by ChartLayoutBuilder)
             "top_languages": top_languages,                # [{"name","percent","color"}, ...]
 
-            # Datos curiosos
+            # Fun facts
             "longest_streak": self.longest_streak(days),
             "most_active_weekday": self.most_active_weekday(days),
             "busiest_day": self.busiest_day(days),

@@ -1,4 +1,4 @@
-"""Renderizado del template SVG con Jinja2."""
+"""SVG template rendering with Jinja2."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -7,11 +7,11 @@ from jinja2 import Environment, FileSystemLoader
 
 
 class SvgRenderer:
-    """Carga el template una vez y lo renderiza contra el dict de stats."""
+    """Loads the template once and renders it against the stats dictionary."""
 
-    def __init__(self, assets_dir: Path, template_name: str = "github_stats.svg.template"):
+    def __init__(self, assets_dir: Path, template_dir: Path, template_name: str = "github_stats.svg.template"):
         self._assets_dir = assets_dir
-        env = Environment(loader=FileSystemLoader(assets_dir))
+        env = Environment(loader=FileSystemLoader(template_dir))
         self._template = env.get_template(template_name)
 
     def render(self, stats: dict, output_name: str = "github_stats.svg") -> Path:

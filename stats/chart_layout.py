@@ -1,11 +1,11 @@
-"""Geometría pura para el SVG: convierte stats en coordenadas x/y/ancho/alto.
+"""Pure geometry for the SVG: converts stats into x/y/width/height coordinates.
 
-No toca la red ni el template, solo matemática. Las constantes deben
-coincidir con las coordenadas usadas en assets/github_stats.svg.template.
+It does not touch the network or the template, only math. The constants must
+match the coordinates used in assets/github_stats.svg.template.
 """
 from __future__ import annotations
 
-# Gráfico de barras "commits por año"
+# Bar chart for "commits per year"
 CHART_X = 60
 CHART_WIDTH = 370
 CHART_BASELINE_Y = 406
@@ -13,10 +13,10 @@ CHART_MAX_HEIGHT = 130
 BAR_WIDTH = 28
 MAX_YEARS_SHOWN = 6
 
-# Barras horizontales de "lenguajes principales".
-# Usa el mismo alto disponible que el chart de commits (CHART_MAX_HEIGHT)
-# para que ambos bloques queden simétricos, repartiendo las filas tipo
-# "space-between" según cuántos lenguajes haya.
+# Horizontal bars for "top languages".
+# Uses the same available height as the commits chart (CHART_MAX_HEIGHT)
+# so both blocks remain symmetrical, distributing the rows like
+# "space-between" according to how many languages there are.
 LANG_AREA_TOP = 276
 LANG_AREA_HEIGHT = CHART_MAX_HEIGHT
 LANG_TRACK_WIDTH = 380
@@ -25,7 +25,7 @@ LANG_BAR_HEIGHT_TOP = 10   # grosor del lenguaje #1 (destacado)
 
 
 class ChartLayoutBuilder:
-    """Precalcula la posición de cada barra para que el template solo dibuje."""
+    """Precomputes each bar position so the template only has to draw."""
 
     @staticmethod
     def build_commits_chart(commits_by_year: dict[int, int], best_year: int) -> list[dict]:

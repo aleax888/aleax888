@@ -1,7 +1,7 @@
-"""Strings de las queries GraphQL usadas por GitHubClient.
+"""GraphQL query strings used by GitHubClient.
 
-Se mantienen aparte del cliente para que este último no se llene de texto
-y sea más fácil de leer.
+They stay separate from the client so it does not get cluttered with text and
+remains easier to read.
 """
 
 USER_QUERY = """
@@ -16,10 +16,10 @@ query($login: String!) {
 }
 """
 
-# Nota: se quitó `primaryLanguage` porque ya no se usa — el cálculo de
-# lenguajes principales ahora pondera por % de bytes DENTRO de cada repo
-# (ver StatsAggregator.aggregate_languages), no por el lenguaje dominante
-# ni por bytes crudos globales.
+# Note: `primaryLanguage` was removed because it is no longer used — the
+# main-language calculation now weights by % of bytes WITHIN each repo
+# (see StatsAggregator.aggregate_languages), not by the dominant language
+# or by raw global bytes.
 REPOS_QUERY = """
 query($login: String!, $after: String) {
   user(login: $login) {

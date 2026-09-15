@@ -1,1 +1,1 @@
-"""Paquete con la lógica de generación de estadísticas de GitHub."""
+"""Package with the GitHub stats generation logic."""

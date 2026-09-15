@@ -1,17 +1,16 @@
 """
-Genera estadísticas de GitHub (commits por año, lenguajes, repos y datos
-curiosos) y las renderiza en una plantilla SVG.
+Generates GitHub statistics (commits per year, languages, repos, and fun
+facts) and renders them in an SVG template.
 
-Requiere en el .env:
-    GITHUB_USERNAME=tu_usuario
-    GITHUB_TOKEN=ghp_xxx   (con permisos de lectura; si quieres que se
-                             cuenten también tus commits en repos privados,
-                             el token debe pertenecer a GITHUB_USERNAME y
-                             tener acceso a esos repos)
+Requires in the .env:
+    GITHUB_USERNAME=your_username
+    GITHUB_TOKEN=ghp_xxx   (with read permissions; if you want your private
+                            repo commits counted as well, the token must belong
+                            to GITHUB_USERNAME and have access to those repos)
 
-Este archivo es solo el orquestador: toda la lógica vive en el paquete
-`stats/` (config, cliente de GitHub, agregación, layout del gráfico y
-renderizado del SVG).
+This file is only the orchestrator: all the logic lives in the `stats/`
+package (config, GitHub client, aggregation, chart layout, and SVG
+rendering).
 """
 from pathlib import Path
 
@@ -29,7 +28,7 @@ def main() -> None:
     client = GitHubClient(config.token)
     aggregator = StatsAggregator()
 
-    print(f"Obteniendo datos de GitHub para @{config.username}…")
+    print(f"Fetching GitHub data for @{config.username}…")
 
     user = client.get_user_overview(config.username)
     repos = client.get_all_repositories(config.username)
@@ -43,12 +42,12 @@ def main() -> None:
     )
     stats["language_bars"] = ChartLayoutBuilder.build_language_bars(stats["top_languages"])
 
-    renderer = SvgRenderer(config.assets_dir)
+    renderer = SvgRenderer(config.assets_dir, config.templates_dir)
     renderer.render(stats)
 
     print(
-        f"✅ github_stats.svg actualizado: {stats['commits_total']} commits, "
-        f"{stats['repositories']} repos, {len(stats['top_languages'])} lenguajes."
+        f"✅ github_stats.svg updated: {stats['commits_total']} commits, "
+        f"{stats['repositories']} repos, {len(stats['top_languages'])} languages."
     )
 
 

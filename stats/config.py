@@ -1,4 +1,4 @@
-"""Configuración de la app, cargada desde variables de entorno (.env)."""
+"""Application configuration, loaded from environment variables (.env)."""
 from __future__ import annotations
 
 import os
@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 @dataclass(frozen=True)
 class Config:
-    """Agrupa lo que antes eran variables sueltas a nivel de módulo."""
+    """Groups what used to be loose module-level variables."""
 
     username: str
     token: str
@@ -21,14 +21,18 @@ class Config:
     def assets_dir(self) -> Path:
         return self.root / "assets"
 
+    @property
+    def templates_dir(self) -> Path:
+        return self.root / "stats" / "templates"
+
     @classmethod
     def from_env(cls, root: Path) -> "Config":
-        """Carga el .env ubicado en `root` y valida que estén las claves.
+        """Loads the .env file located in `root` and validates that the keys exist.
 
-        A diferencia del script original, esto NO se ejecuta al importar el
-        módulo (evita el `sys.exit` a nivel de import que hacía imposible
-        testear o reutilizar el código sin variables de entorno reales).
-        Se llama explícitamente desde el entrypoint (`update_stats.py`).
+        Unlike the original script, this does NOT run on module import (it avoids
+        the `sys.exit` at import time that made it impossible to test or reuse the
+        code without real environment variables). It is called explicitly from the
+        entrypoint (`update_stats.py`).
         """
         load_dotenv(root / ".env")
 
@@ -36,6 +40,6 @@ class Config:
         token = os.getenv("GITHUB_TOKEN")
 
         if not username or not token:
-            sys.exit("Error: define GITHUB_USERNAME y GITHUB_TOKEN en tu archivo .env")
+            sys.exit("Error: define GITHUB_USERNAME and GITHUB_TOKEN in your .env file")
 
         return cls(username=username, token=token, root=root)
