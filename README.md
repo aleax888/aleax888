@@ -3,19 +3,20 @@
   <img src="assets/banner.svg" alt="Alex Maglio Neyra Herrada banner" />
 </p>
 
----
-
 <!-- Name -->
+<p align="center">
+  <img src="assets/logo-round.svg" width="90" alt="Alex Maglio personal logo" />
+</p>
 <h1 align="center">Hi, I am Alex Maglio Neyra Herrada 👋</h1>
 
 <!-- Some info -->
-<h5 align="center">MOBILE MULTIPLATFORM · PERÚ (UTC-5)</h5>
+<h5 align="center">BACKEND & MOBILE · PERÚ (UTC-5)</h5>
 
 <p align="center">
-I am a Computer Science enthusiast specializing in multiplatform mobile development. 
+I build mobile apps and backends, follow interesting ideas, and learn whatever the next challenge needs.
 </p>
 <p align="center">
-I build practical mobile and backend solutions, and I explore what can be created with artificial intelligence.
+I like exploring what I can create with AI, too. Usually with curiosity. Occasionally with Super Saiyan energy.
 </p>
 
 ---
@@ -79,8 +80,19 @@ I build practical mobile and backend solutions, and I explore what can be create
 
 ---
 
+<!-- github stats -->
 <p align="center">
-  <img src="assets/github_stats.svg" alt="Misti" />
+  <img src="assets/github_stats.svg" alt="GitHub statistics: commits, repositories, and most used languages" />
+</p>
+
+---
+
+<!-- a little personality -->
+<p align="center">
+  <img src="assets/build-celebration.gif" width="280" alt="A football coach powering up into a Super Saiyan in celebration" />
+</p>
+<p align="center">
+  <i>Me when the project finally works after “one small change”.</i>
 </p>
 
 ---
