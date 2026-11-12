@@ -122,7 +122,9 @@ class StatsAggregator:
         """Returns the stats dictionary (without the pixel chart layout; that is
         added separately by ChartLayoutBuilder)."""
         commits_by_year = {
-            year: data["totalCommitContributions"] + data["restrictedContributionsCount"]
+            # Includes private commits visible to the token. Restricted
+            # contributions can also be issues or PRs, so are not commit counts.
+            year: data["totalCommitContributions"]
             for year, data in contributions_by_year.items()
         }
         commits_total = sum(commits_by_year.values())

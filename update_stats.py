@@ -4,9 +4,13 @@ facts) and renders them in an SVG template.
 
 Requires in the .env:
     GITHUB_USERNAME=your_username
-    GITHUB_TOKEN=ghp_xxx   (with read permissions; if you want your private
-                            repo commits counted as well, the token must belong
-                            to GITHUB_USERNAME and have access to those repos)
+    GITHUB_TOKEN=ghp_xxx   (classic token: repo + read:user for private repos
+                            and contributions; must belong to GITHUB_USERNAME)
+
+Repository and language statistics include owned non-fork repositories visible
+to the token, both public and private. Commit totals use GitHub's contribution
+counts, including private commits accessible to the token. In GitHub Actions,
+store the token in the STATS_GH_TOKEN repository secret.
 
 This file is only the orchestrator: all the logic lives in the `stats/`
 package (config, GitHub client, aggregation, chart layout, and SVG

@@ -28,7 +28,6 @@ query($login: String!, $after: String) {
       after: $after
       ownerAffiliations: OWNER
       isFork: false
-      privacy: PUBLIC
       orderBy: {field: UPDATED_AT, direction: DESC}
     ) {
       totalCount
@@ -55,7 +54,6 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
       totalCommitContributions
-      restrictedContributionsCount
       totalPullRequestContributions
       totalIssueContributions
       totalPullRequestReviewContributions

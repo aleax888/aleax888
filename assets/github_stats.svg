@@ -111,7 +111,7 @@
                   fill="#FFFFFF"
                   font-size="42"
                   font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-                  font-weight="bold">750
+                  font-weight="bold">816
             </text>
             <text x="200" y="170"
                   text-anchor="middle"
@@ -127,7 +127,7 @@
                   fill="#FFFFFF"
                   font-size="42"
                   font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
-                  font-weight="bold">19
+                  font-weight="bold">23
             </text>
             <text x="450" y="170" 
                   text-anchor="middle"
@@ -144,7 +144,7 @@
                   font-size="42"
                   font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
                   font-weight="bold">
-                  12
+                  14
             </text>
             <text x="700" y="170" 
                   text-anchor="middle"
@@ -304,19 +304,19 @@
                   '25
             </text>
              
-            <rect x="402" y="349" 
-                  width="28" height="57"
+            <rect x="402" y="318" 
+                  width="28" height="88"
                   rx="4"
                   fill="url(#bar_gradient)"
                   filter="none" /> 
                    
-                  <text x="416" y="341" 
+                  <text x="416" y="310" 
                         text-anchor="middle"
                         fill="#FFFFFF" 
                         fill-opacity="0.9" 
                         font-size="10"
                         font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-                        122
+                        188
                   </text>
 
             <text x="416" y="422" 
@@ -340,7 +340,7 @@
                   fill="#C4B5FD" 
                   font-size="12"
                   font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
-                  45.2%
+                  41.7%
             </text>
 
             <rect x="470" y="276" 
@@ -350,7 +350,7 @@
                   fill="#FFFFFF" 
                   fill-opacity="0.12" />
             <rect x="470" y="276"
-                  width="172" height="10" 
+                  width="158" height="10" 
                   rx="3"
                   fill="url(#lang_highlight_gradient)"
                   filter="url(#glow)" /> 
@@ -359,14 +359,14 @@
                   fill="#FFFFFF"
                   font-size="12"
                   font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-                  Python
+                  Dart
             </text>
             <text x="850" y="314" 
                   text-anchor="end" 
                   fill="#C4B5FD" 
                   font-size="12"
                   font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
-                  13.4%
+                  11.9%
             </text>
 
             <rect x="470" y="319" 
@@ -376,23 +376,23 @@
                   fill="#FFFFFF" 
                   fill-opacity="0.12" />
             <rect x="470" y="319"
-                  width="51" height="6" 
+                  width="45" height="6" 
                   rx="3"
-                  fill="#3572A5"
+                  fill="#00B4AB"
                   filter="none" /> 
              
             <text x="470" y="358"
                   fill="#FFFFFF"
                   font-size="12"
                   font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-                  Dart
+                  Python
             </text>
             <text x="850" y="358" 
                   text-anchor="end" 
                   fill="#C4B5FD" 
                   font-size="12"
                   font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
-                  10.6%
+                  11.4%
             </text>
 
             <rect x="470" y="363" 
@@ -402,9 +402,9 @@
                   fill="#FFFFFF" 
                   fill-opacity="0.12" />
             <rect x="470" y="363"
-                  width="40" height="6" 
+                  width="43" height="6" 
                   rx="3"
-                  fill="#00B4AB"
+                  fill="#3572A5"
                   filter="none" /> 
              
             <text x="470" y="401"
@@ -418,7 +418,7 @@
                   fill="#C4B5FD" 
                   font-size="12"
                   font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace">
-                  30.8%
+                  35.0%
             </text>
 
             <rect x="470" y="406" 
@@ -428,7 +428,7 @@
                   fill="#FFFFFF" 
                   fill-opacity="0.12" />
             <rect x="470" y="406"
-                  width="117" height="6" 
+                  width="133" height="6" 
                   rx="3"
                   fill="#858585"
                   filter="none" /> 
@@ -517,7 +517,7 @@
                   opacity="0.6" 
                   font-size="11"
                   font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-                  Last updated: 2026-09-15
+                  Last updated: 2026-11-12
             </text>
       </g>
 </svg>

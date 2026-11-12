@@ -39,7 +39,10 @@ class GitHubClient:
         return data["user"]
 
     def get_all_repositories(self, username: str) -> list[dict]:
-        """Fetches ALL public owned repos, paginating 100 at a time."""
+        """Fetches owned non-fork repos visible to the token, including private ones.
+
+        Paginates 100 at a time. Private repos require token access.
+        """
         repos: list[dict] = []
         after = None
         while True:

@@ -34,7 +34,7 @@ I build practical mobile and backend solutions, and I explore what can be create
   <tr>
     <td align="center">
       <a href="https://portfolio.alex-maglio-neyra-herrada.workers.dev/">
-        <img src="https://api.iconify.design/fa6-solid:globe.svg?color=%239CA3AF" width="60" alt="Website" />
+        <img src="https://api.iconify.design/fa6-solid/globe.svg?color=%239CA3AF" width="60" alt="Website" />
       </a>
       <br />
       <sub>Website</sub>
@@ -55,7 +55,7 @@ I build practical mobile and backend solutions, and I explore what can be create
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/alex-maglio-neyra-herrada-04271432a/">
-        <img src="https://api.iconify.design/fa6-brands:linkedin-in.svg?color=%239CA3AF" width="60" alt="LinkedIn" />
+        <img src="https://api.iconify.design/fa6-brands/linkedin-in.svg?color=%239CA3AF" width="60" alt="LinkedIn" />
       </a>
       <br />
       <sub>LinkedIn</sub>
