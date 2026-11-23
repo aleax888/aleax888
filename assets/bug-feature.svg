@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="96" viewBox="0 0 520 96" role="img" aria-labelledby="title">
+  <title id="title">Dear QA, It is not a bug. It is a feature.</title>
+  <style>
+    .typing {
+      animation: type 8s steps(33, end) infinite;
+    }
+    @keyframes type {
+      0%, 8% { transform: translateX(-495px); }
+      52%, 100% { transform: translateX(0); }
+    }
+    .cursor {
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .typing, .cursor { animation: none; }
+      .cursor { display: none; }
+    }
+  </style>
+  <defs>
+    <!-- The 33 characters each occupy a 15-unit cell. -->
+    <clipPath id="reveal">
+      <rect class="typing" x="12" y="40" width="495" height="56"/>
+    </clipPath>
+  </defs>
+  <g fill="#757575" font-family="'Courier New', Courier, monospace" font-size="25">
+    <text x="12" y="34">Dear QA,</text>
+    <text x="12" y="72"
+          textLength="495" lengthAdjust="spacingAndGlyphs" clip-path="url(#reveal)">It is not a <tspan fill="#cd4545">bug</tspan>. It is a <tspan fill="#21854d">feature</tspan>.</text>
+    <g class="typing">
+      <rect class="cursor" x="507" y="50" width="2" height="27"/>
+    </g>
+  </g>
+</svg>

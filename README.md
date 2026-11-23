@@ -7,7 +7,7 @@
 <p align="center">
   <img src="assets/logo-round.svg" width="90" alt="Alex Maglio personal logo" />
 </p>
-<h1 align="center">Hi, I am Alex Maglio Neyra Herrada 👋</h1>
+<h1 align="center">Hi, I am Alex 👋</h1>
 
 <!-- Some info -->
 <h5 align="center">BACKEND & MOBILE · PERÚ (UTC-5)</h5>
@@ -16,7 +16,7 @@
 I build mobile apps and backends, follow interesting ideas, and learn whatever the next challenge needs.
 </p>
 <p align="center">
-I like exploring what I can create with AI, too. Usually with curiosity. Occasionally with Super Saiyan energy.
+I like exploring what I can create with AI, too. 
 </p>
 
 ---
@@ -77,6 +77,13 @@ I like exploring what I can create with AI, too. Usually with curiosity. Occasio
     </td>
   </tr>
 </table>
+
+---
+
+<p align="center">
+  <img src="assets/bug-feature.svg" alt="Dear QA, It is not a bug. It is a feature." />
+</p>
+
 
 ---
 
